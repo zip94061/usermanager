@@ -1,0 +1,1009 @@
+2026-05-19 18:29:25 client - __init__ - ========================================
+2026-05-19 18:29:25 client - __init__ - Инициализация программы
+2026-05-19 18:29:25 config - export_to_config_file - config.json обновлен
+2026-05-19 18:35:31 client - __init__ - ========================================
+2026-05-19 18:35:31 client - __init__ - Инициализация программы
+2026-05-19 18:35:31 config - import_from_config_file - config.json загружен
+2026-05-19 18:37:48 client - __init__ - ========================================
+2026-05-19 18:37:48 client - __init__ - Инициализация программы
+2026-05-19 18:37:48 config - import_from_config_file - config.json загружен
+2026-05-19 18:39:57 client - __init__ - ========================================
+2026-05-19 18:39:57 client - __init__ - Инициализация программы
+2026-05-19 18:39:57 config - import_from_config_file - config.json загружен
+2026-05-19 18:39:58 client - __init__ - ========================================
+2026-05-19 18:39:58 client - __init__ - Инициализация программы
+2026-05-19 18:39:58 config - import_from_config_file - config.json загружен
+2026-05-19 18:42:08 client - __init__ - ========================================
+2026-05-19 18:42:08 client - __init__ - Инициализация программы
+2026-05-19 18:42:08 config - import_from_config_file - config.json загружен
+2026-05-19 18:42:32 config - export_to_config_file - config.json обновлен
+2026-05-19 18:44:37 client - __init__ - ========================================
+2026-05-19 18:44:37 client - __init__ - Инициализация программы
+2026-05-19 18:44:37 config - import_from_config_file - config.json загружен
+2026-05-19 18:44:48 client - save - Поиск файла базы данных
+2026-05-19 18:44:48 client - save - Файл не найден. Инициализация подключения файла
+2026-05-19 18:44:49 client - get_database_file - Некоректный файл базы данных
+2026-05-19 18:44:49 client - save - Файл найден
+2026-05-19 18:44:49 config - export_to_config_file - config.json обновлен
+2026-05-19 18:44:49 client - save - Инициализация ввода пароля
+2026-05-19 18:44:50 client - get_password_database - Неверный пароль
+2026-05-19 18:44:53 client - check_data - Не заполенно Внутренний номер телефона
+2026-05-19 18:48:39 client - __init__ - ========================================
+2026-05-19 18:48:39 client - __init__ - Инициализация программы
+2026-05-19 18:48:39 config - import_from_config_file - config.json загружен
+2026-05-19 18:48:41 client - check_data - Не заполенно Логин
+2026-05-19 18:48:47 client - get_database_file - Некоректный файл базы данных
+2026-05-19 18:50:27 client - __init__ - ========================================
+2026-05-19 18:50:27 client - __init__ - Инициализация программы
+2026-05-19 18:50:27 config - import_from_config_file - config.json загружен
+2026-05-19 18:53:11 config - export_to_config_file - config.json обновлен
+2026-05-19 18:53:19 client - check_data - Не заполенно Логин
+2026-05-20 14:22:13 client - __init__ - ========================================
+2026-05-20 14:22:13 client - __init__ - Инициализация программы
+2026-05-20 14:23:24 client - __init__ - ========================================
+2026-05-20 14:23:24 client - __init__ - Инициализация программы
+2026-05-20 14:23:24 client - __init__ - ColorScheme.Dark
+2026-05-20 14:23:24 config - import_from_config_file - config.json загружен
+2026-05-20 14:41:07 client - __init__ - ========================================
+2026-05-20 14:41:07 client - __init__ - Инициализация программы
+2026-05-20 14:41:07 client - __init__ - ColorScheme.Dark
+2026-05-20 14:41:07 config - import_from_config_file - config.json загружен
+2026-05-20 14:42:10 client - __init__ - ========================================
+2026-05-20 14:42:10 client - __init__ - Инициализация программы
+2026-05-20 14:42:10 client - __init__ - ColorScheme.Dark
+2026-05-20 14:42:10 config - import_from_config_file - config.json загружен
+2026-05-20 14:43:09 client - __init__ - ========================================
+2026-05-20 14:43:09 client - __init__ - Инициализация программы
+2026-05-20 14:43:09 client - __init__ - ColorScheme.Light
+2026-05-20 14:43:09 config - import_from_config_file - config.json загружен
+2026-05-20 14:43:54 client - __init__ - ========================================
+2026-05-20 14:43:54 client - __init__ - Инициализация программы
+2026-05-20 14:43:54 client - __init__ - ColorScheme.Light
+2026-05-20 14:43:54 config - import_from_config_file - config.json загружен
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x14285b0, name="pushButton_1") at 0x7f388980e440>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x132fa50, name="pushButton_2") at 0x7f388980e680>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1372ba0, name="pushButton_3") at 0x7f388980e880>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x13714e0, name="pushButton_4") at 0x7f388980ea80>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1827cd0, name="pushButton_5") at 0x7f388980ec80>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1946e10, name="pushButton_6") at 0x7f388980ee80>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1b10970, name="pushButton_7") at 0x7f388980f100>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x19eb460, name="pushButton") at 0x7f388980f300>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1a497e0, name="pushButton_8") at 0x7f388980f3c0>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x17a5950, name="pushButton_9") at 0x7f388980f5c0>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x18c1ea0, name="pushButton_12") at 0x7f3889830300>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x18ed6b0, name="qt_menubar_ext_button") at 0x7f3889832040>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x1a46470, name="qt_toolbar_ext_button") at 0x7f3889831f00>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x17a0bd0) at 0x7f3889832080>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x190b460) at 0x7f388984a600>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x17a0ba0) at 0x7f388984a680>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x190b430) at 0x7f388984a6c0>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1937c60, name="pushButton") at 0x7f3889832cc0>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x17d5930, name="pushButton_2") at 0x7f388a366f80>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x18fce10, name="pushButton_3") at 0x7f38898331c0>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1a17a50, name="pushButton_4") at 0x7f3889833740>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1867da0, name="pushButton_5") at 0x7f38898337c0>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x1b26930) at 0x7f388984a700>
+2026-05-20 14:43:54 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x181d5a0) at 0x7f388984a740>
+2026-05-20 14:45:59 client - __init__ - ========================================
+2026-05-20 14:45:59 client - __init__ - Инициализация программы
+2026-05-20 14:45:59 client - __init__ - ColorScheme.Light
+2026-05-20 14:45:59 config - import_from_config_file - config.json загружен
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x22dfd210, name="pushButton_1") at 0x7f8ecc6bcb00>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x22da91b0, name="pushButton_2") at 0x7f8ecbb21ec0>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x22ce3df0, name="pushButton_3") at 0x7f8ecbb220c0>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x22d25880, name="pushButton_4") at 0x7f8ecbb222c0>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x234a42a0, name="pushButton_5") at 0x7f8ecbb22480>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x234a50f0, name="pushButton_6") at 0x7f8ecbb22640>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x233932e0, name="pushButton_7") at 0x7f8ecbb22880>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x232e8710, name="pushButton") at 0x7f8ecbb22a80>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23385490, name="pushButton_8") at 0x7f8ecbb22b40>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x231b9ab0, name="pushButton_9") at 0x7f8ecbb22d40>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x233286a0, name="pushButton_12") at 0x7f8ecbb23a40>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x232393b0, name="qt_menubar_ext_button") at 0x7f8ecbb51c00>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x233ba900, name="qt_toolbar_ext_button") at 0x7f8ecbb51c40>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x231ba770) at 0x7f8ecbb51c80>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x234c36a0) at 0x7f8ecbb51cc0>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x23219d70) at 0x7f8ecbb51d00>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x234c3670) at 0x7f8ecbb51d40>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2321cc10, name="pushButton") at 0x7f8ecbb3e480>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23181c30, name="pushButton_2") at 0x7f8ecbb3d080>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23303a40, name="pushButton_3") at 0x7f8ecbb3e940>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2349f290, name="pushButton_4") at 0x7f8ecbb3ee40>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2334d880, name="pushButton_5") at 0x7f8ecbb3eec0>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x234e03a0) at 0x7f8ecbb51d80>
+2026-05-20 14:45:59 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x231c0ad0) at 0x7f8ecbb51dc0>
+2026-05-20 14:46:11 client - __init__ - ========================================
+2026-05-20 14:46:11 client - __init__ - Инициализация программы
+2026-05-20 14:46:11 client - __init__ - ColorScheme.Light
+2026-05-20 14:46:11 config - import_from_config_file - config.json загружен
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2e850fe0, name="pushButton_1") at 0x7f7e28f642c0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2e8391f0, name="pushButton_2") at 0x7f7e28e12540>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2e773e30, name="pushButton_3") at 0x7f7e28e12740>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2e7b58c0, name="pushButton_4") at 0x7f7e28e128c0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ec6e6b0, name="pushButton_5") at 0x7f7e28e12ac0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ef93880, name="pushButton_6") at 0x7f7e28e12cc0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ec9a7f0, name="pushButton_7") at 0x7f7e28e12f40>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2edfc610, name="pushButton") at 0x7f7e28e13100>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ee30210, name="pushButton_8") at 0x7f7e28e131c0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ebf5e10, name="pushButton_9") at 0x7f7e28e133c0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ee8c160, name="pushButton_12") at 0x7f7e28e30140>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x2ee2db00, name="qt_menubar_ext_button") at 0x7f7e28e460c0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x2eda2640, name="qt_toolbar_ext_button") at 0x7f7e28e46140>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x2ed3fbe0) at 0x7f7e28e46180>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x2ebe5930) at 0x7f7e28e461c0>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x2ed3fbb0) at 0x7f7e28e46200>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x2ebe5900) at 0x7f7e28e46240>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ef266e0, name="pushButton") at 0x7f7e28e32b00>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ed93bf0, name="pushButton_2") at 0x7f7e28e32600>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ee40960, name="pushButton_3") at 0x7f7e28e32f80>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2eddce00, name="pushButton_4") at 0x7f7e28e33480>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ef8af70, name="pushButton_5") at 0x7f7e28e33500>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ef6b3a0) at 0x7f7e28e46280>
+2026-05-20 14:46:11 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2ee98260) at 0x7f7e28e462c0>
+2026-05-20 14:46:18 client - __init__ - ========================================
+2026-05-20 14:46:18 client - __init__ - Инициализация программы
+2026-05-20 14:46:19 client - __init__ - ColorScheme.Light
+2026-05-20 14:46:19 config - import_from_config_file - config.json загружен
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23d96010, name="pushButton_1") at 0x7f8b40916780>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23d7e220, name="pushButton_2") at 0x7f8b409169c0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23cb8e60, name="pushButton_3") at 0x7f8b40916bc0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x23cfa8f0, name="pushButton_4") at 0x7f8b40916dc0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x24343640, name="pushButton_5") at 0x7f8b40916fc0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2414a3a0, name="pushButton_6") at 0x7f8b409171c0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2436ec80, name="pushButton_7") at 0x7f8b40917440>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x24286140, name="pushButton") at 0x7f8b40917640>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2422fbe0, name="pushButton_8") at 0x7f8b40917700>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x243d5750, name="pushButton_9") at 0x7f8b40917900>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2434bff0, name="pushButton_12") at 0x7f8b40938680>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x24247550, name="qt_menubar_ext_button") at 0x7f8b4094e640>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x24200570, name="qt_toolbar_ext_button") at 0x7f8b4094e6c0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x24498840) at 0x7f8b4094e700>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x24131dc0) at 0x7f8b4094e740>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x24498810) at 0x7f8b4094e780>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QToolButton(0x24131d90) at 0x7f8b4094e7c0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x24473c90, name="pushButton") at 0x7f8b4093af00>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x244c7240, name="pushButton_2") at 0x7f8b4093a600>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2415f770, name="pushButton_3") at 0x7f8b40ae39c0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x241f1820, name="pushButton_4") at 0x7f8b40bcb7c0>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x2434baf0, name="pushButton_5") at 0x7f8b4093b880>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x243d5ff0) at 0x7f8b4094e800>
+2026-05-20 14:46:19 client - set_theme_icons - <PySide6.QtWidgets.QPushButton(0x243f0280) at 0x7f8b4094e840>
+2026-05-20 14:50:00 client - __init__ - ========================================
+2026-05-20 14:50:00 client - __init__ - Инициализация программы
+2026-05-20 14:50:00 client - __init__ - ColorScheme.Light
+2026-05-20 14:50:00 config - import_from_config_file - config.json загружен
+2026-05-20 14:50:50 client - __init__ - ========================================
+2026-05-20 14:50:50 client - __init__ - Инициализация программы
+2026-05-20 14:50:50 client - __init__ - ColorScheme.Light
+2026-05-20 14:50:50 config - import_from_config_file - config.json загружен
+2026-05-20 14:52:24 client - __init__ - ========================================
+2026-05-20 14:52:24 client - __init__ - Инициализация программы
+2026-05-20 14:52:24 client - __init__ - ColorScheme.Light
+2026-05-20 14:52:24 config - import_from_config_file - config.json загружен
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_1
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_6
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_7
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_8
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_9
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_12
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_menubar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: qt_toolbar_ext_button
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_2
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_3
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_4
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: pushButton_5
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 14:52:24 client - set_theme_icons - Включаем маску для ресурса кнопки: 
+2026-05-20 15:29:32 client - __init__ - ========================================
+2026-05-20 15:29:32 client - __init__ - Инициализация программы
+2026-05-20 15:29:32 client - __init__ - ColorScheme.Dark
+2026-05-20 15:29:32 config - import_from_config_file - config.json загружен
+2026-05-20 15:32:08 client - __init__ - ========================================
+2026-05-20 15:32:08 client - __init__ - Инициализация программы
+2026-05-20 15:32:08 client - __init__ - ColorScheme.Dark
+2026-05-20 15:32:08 config - import_from_config_file - config.json загружен
+2026-05-20 15:32:46 client - __init__ - ========================================
+2026-05-20 15:32:46 client - __init__ - Инициализация программы
+2026-05-20 15:32:46 client - __init__ - ColorScheme.Dark
+2026-05-20 15:32:46 config - import_from_config_file - config.json загружен
+2026-05-20 15:43:51 client - __init__ - ========================================
+2026-05-20 15:43:51 client - __init__ - Инициализация программы
+2026-05-20 15:43:51 client - __init__ - ColorScheme.Dark
+2026-05-20 15:43:51 config - import_from_config_file - config.json загружен
+2026-05-20 15:43:59 client - __init__ - ========================================
+2026-05-20 15:43:59 client - __init__ - Инициализация программы
+2026-05-20 15:43:59 client - __init__ - ColorScheme.Light
+2026-05-20 15:43:59 config - import_from_config_file - config.json загружен
+2026-05-20 15:44:54 client - __init__ - ========================================
+2026-05-20 15:44:54 client - __init__ - Инициализация программы
+2026-05-20 15:44:54 client - __init__ - ColorScheme.Light
+2026-05-20 15:44:54 config - import_from_config_file - config.json загружен
+2026-05-20 15:50:13 client - __init__ - ========================================
+2026-05-20 15:50:13 client - __init__ - Инициализация программы
+2026-05-20 15:50:13 client - __init__ - ColorScheme.Light
+2026-05-20 15:50:13 config - import_from_config_file - config.json загружен
+2026-05-20 15:50:50 client - __init__ - ========================================
+2026-05-20 15:50:50 client - __init__ - Инициализация программы
+2026-05-20 15:50:50 client - __init__ - ColorScheme.Light
+2026-05-20 15:50:50 config - import_from_config_file - config.json загружен
+2026-05-20 15:51:26 client - __init__ - ========================================
+2026-05-20 15:51:26 client - __init__ - Инициализация программы
+2026-05-20 15:51:26 client - __init__ - ColorScheme.Light
+2026-05-20 15:51:26 config - import_from_config_file - config.json загружен
+2026-05-20 15:51:35 client - __init__ - ========================================
+2026-05-20 15:51:35 client - __init__ - Инициализация программы
+2026-05-20 15:51:35 client - __init__ - ColorScheme.Light
+2026-05-20 15:51:35 config - import_from_config_file - config.json загружен
+2026-05-20 15:52:05 client - __init__ - ========================================
+2026-05-20 15:52:05 client - __init__ - Инициализация программы
+2026-05-20 15:52:05 client - __init__ - ColorScheme.Light
+2026-05-20 15:52:05 config - import_from_config_file - config.json загружен
+2026-05-20 16:07:02 client - __init__ - ========================================
+2026-05-20 16:07:02 client - __init__ - Инициализация программы
+2026-05-20 16:07:02 client - __init__ - ColorScheme.Dark
+2026-05-20 16:07:02 config - import_from_config_file - config.json загружен
+2026-05-20 16:07:11 client - __init__ - ========================================
+2026-05-20 16:07:11 client - __init__ - Инициализация программы
+2026-05-20 16:07:11 client - __init__ - ColorScheme.Light
+2026-05-20 16:07:11 config - import_from_config_file - config.json загружен
+2026-05-20 16:11:14 client - __init__ - ========================================
+2026-05-20 16:11:14 client - __init__ - Инициализация программы
+2026-05-20 16:11:14 client - __init__ - ColorScheme.Light
+2026-05-20 16:11:14 config - import_from_config_file - config.json загружен
+2026-05-20 16:14:08 client - __init__ - ========================================
+2026-05-20 16:14:08 client - __init__ - Инициализация программы
+2026-05-20 16:14:08 client - __init__ - ColorScheme.Light
+2026-05-20 16:14:08 config - import_from_config_file - config.json загружен
+2026-05-20 16:14:36 client - __init__ - ========================================
+2026-05-20 16:14:36 client - __init__ - Инициализация программы
+2026-05-20 16:14:36 client - __init__ - ColorScheme.Dark
+2026-05-20 16:14:36 config - import_from_config_file - config.json загружен
+2026-05-20 16:15:10 client - __init__ - ========================================
+2026-05-20 16:15:10 client - __init__ - Инициализация программы
+2026-05-20 16:15:10 client - __init__ - ColorScheme.Dark
+2026-05-20 16:15:10 config - import_from_config_file - config.json загружен
+2026-05-20 16:17:40 client - __init__ - ========================================
+2026-05-20 16:17:40 client - __init__ - Инициализация программы
+2026-05-20 16:17:40 client - __init__ - ColorScheme.Dark
+2026-05-20 16:17:40 config - import_from_config_file - config.json загружен
+2026-05-20 16:18:18 client - __init__ - ========================================
+2026-05-20 16:18:18 client - __init__ - Инициализация программы
+2026-05-20 16:18:18 client - __init__ - ColorScheme.Dark
+2026-05-20 16:18:18 config - import_from_config_file - config.json загружен
+2026-05-20 16:19:39 client - __init__ - ========================================
+2026-05-20 16:19:39 client - __init__ - Инициализация программы
+2026-05-20 16:19:39 client - __init__ - ColorScheme.Dark
+2026-05-20 16:19:39 config - import_from_config_file - config.json загружен
+2026-05-20 16:20:02 client - __init__ - ========================================
+2026-05-20 16:20:02 client - __init__ - Инициализация программы
+2026-05-20 16:20:02 client - __init__ - ColorScheme.Dark
+2026-05-20 16:20:02 config - import_from_config_file - config.json загружен
+2026-05-20 16:20:33 client - __init__ - ========================================
+2026-05-20 16:20:33 client - __init__ - Инициализация программы
+2026-05-20 16:20:33 client - __init__ - ColorScheme.Dark
+2026-05-20 16:20:33 config - import_from_config_file - config.json загружен
+2026-05-20 16:20:33 client - set_theme_icons - resources/icons/dark_theme/new_user.svg
+2026-05-20 16:21:41 client - __init__ - ========================================
+2026-05-20 16:21:41 client - __init__ - Инициализация программы
+2026-05-20 16:21:41 client - __init__ - ColorScheme.Dark
+2026-05-20 16:21:41 config - import_from_config_file - config.json загружен
+2026-05-20 16:21:41 client - set_theme_icons - :/resources/icons/dark_theme/new_user.svg
+2026-05-20 16:24:23 client - __init__ - ========================================
+2026-05-20 16:24:23 client - __init__ - Инициализация программы
+2026-05-20 16:24:23 client - __init__ - ColorScheme.Dark
+2026-05-20 16:24:23 config - import_from_config_file - config.json загружен
+2026-05-20 16:24:36 client - __init__ - ========================================
+2026-05-20 16:24:36 client - __init__ - Инициализация программы
+2026-05-20 16:24:36 client - __init__ - ColorScheme.Dark
+2026-05-20 16:24:36 config - import_from_config_file - config.json загружен
+2026-05-20 16:24:43 client - __init__ - ========================================
+2026-05-20 16:24:43 client - __init__ - Инициализация программы
+2026-05-20 16:24:43 client - __init__ - ColorScheme.Dark
+2026-05-20 16:24:43 config - import_from_config_file - config.json загружен
+2026-05-20 16:28:34 client - __init__ - ========================================
+2026-05-20 16:28:34 client - __init__ - Инициализация программы
+2026-05-20 16:28:34 client - __init__ - ColorScheme.Dark
+2026-05-20 16:28:34 config - import_from_config_file - config.json загружен
+2026-05-20 16:30:09 client - __init__ - ========================================
+2026-05-20 16:30:09 client - __init__ - Инициализация программы
+2026-05-20 16:30:09 client - __init__ - ColorScheme.Dark
+2026-05-20 16:30:09 config - import_from_config_file - config.json загружен
+2026-05-20 16:30:28 client - __init__ - ========================================
+2026-05-20 16:30:28 client - __init__ - Инициализация программы
+2026-05-20 16:30:28 client - __init__ - ColorScheme.Dark
+2026-05-20 16:30:28 config - import_from_config_file - config.json загружен
+2026-05-20 16:30:39 client - __init__ - ========================================
+2026-05-20 16:30:39 client - __init__ - Инициализация программы
+2026-05-20 16:30:39 client - __init__ - ColorScheme.Dark
+2026-05-20 16:30:39 config - import_from_config_file - config.json загружен
+2026-05-20 16:30:44 client - __init__ - ========================================
+2026-05-20 16:30:44 client - __init__ - Инициализация программы
+2026-05-20 16:30:44 client - __init__ - ColorScheme.Dark
+2026-05-20 16:30:44 config - import_from_config_file - config.json загружен
+2026-05-20 17:14:15 client - __init__ - ========================================
+2026-05-20 17:14:15 client - __init__ - Инициализация программы
+2026-05-20 17:14:15 client - __init__ - ColorScheme.Dark
+2026-05-20 17:14:15 config - import_from_config_file - config.json загружен
+2026-05-20 17:14:16 client - __init__ - ========================================
+2026-05-20 17:14:16 client - __init__ - Инициализация программы
+2026-05-20 17:14:16 client - __init__ - ColorScheme.Dark
+2026-05-20 17:14:16 config - import_from_config_file - config.json загружен
+2026-05-20 17:14:22 cheatsheet - __init__ - template/template.docx не существует. Необходимо создать шаблон для печати
+ В шаблоне должны быть поля {b b}
+2026-05-20 17:15:45 client - __init__ - ========================================
+2026-05-20 17:15:46 client - __init__ - Инициализация программы
+2026-05-20 17:15:46 client - __init__ - ColorScheme.Dark
+2026-05-20 17:15:46 config - import_from_config_file - config.json загружен
+2026-05-20 17:26:06 client - __init__ - ========================================
+2026-05-20 17:26:06 client - __init__ - Инициализация программы
+2026-05-20 17:26:06 client - __init__ - ColorScheme.Dark
+2026-05-20 17:26:06 config - import_from_config_file - config.json загружен
+2026-05-20 17:26:12 cheatsheet - __init__ - {1: 'out of memory', 2: 'syntax error', 3: 'no element found', 4: 'not well-formed (invalid token)', 5: 'unclosed token', 6: 'partial character', 7: 'mismatched tag', 8: 'duplicate attribute', 9: 'junk after document element', 10: 'illegal parameter entity reference', 11: 'undefined entity', 12: 'recursive entity reference', 13: 'asynchronous entity', 14: 'reference to invalid character number', 15: 'reference to binary entity', 16: 'reference to external entity in attribute', 17: 'XML or text declaration not at start of entity', 18: 'unknown encoding', 19: 'encoding specified in XML declaration is incorrect', 20: 'unclosed CDATA section', 21: 'error in processing external entity reference', 22: 'document is not standalone', 23: 'unexpected parser state - please send a bug report', 24: 'entity declared in parameter entity', 25: 'requested feature requires XML_DTD support in Expat', 26: 'cannot change setting once parsing has begun', 27: 'unbound prefix', 28: 'must not undeclare prefix', 29: 'incomplete markup in parameter entity', 30: 'XML declaration not well-formed', 31: 'text declaration not well-formed', 32: 'illegal character(s) in public id', 33: 'parser suspended', 34: 'parser not suspended', 35: 'parsing aborted', 36: 'parsing finished', 37: 'cannot suspend in external parameter entity', 38: 'reserved prefix (xml) must not be undeclared or bound to another namespace name', 39: 'reserved prefix (xmlns) must not be declared or undeclared', 40: 'prefix must not be bound to one of the reserved namespace names', 41: 'invalid argument', 42: 'a successful prior call to function XML_GetBuffer is required', 43: 'limit on input amplification factor (from DTD and entities) breached'}
+2026-05-20 17:26:12 cheatsheet - __init__ - В шаблоне должны быть поля { { full_name } }
+2026-05-20 17:27:23 client - __init__ - ========================================
+2026-05-20 17:27:23 client - __init__ - Инициализация программы
+2026-05-20 17:27:23 client - __init__ - ColorScheme.Dark
+2026-05-20 17:27:23 config - import_from_config_file - config.json загружен
+2026-05-20 17:27:29 cheatsheet - __init__ - {1: 'out of memory', 2: 'syntax error', 3: 'no element found', 4: 'not well-formed (invalid token)', 5: 'unclosed token', 6: 'partial character', 7: 'mismatched tag', 8: 'duplicate attribute', 9: 'junk after document element', 10: 'illegal parameter entity reference', 11: 'undefined entity', 12: 'recursive entity reference', 13: 'asynchronous entity', 14: 'reference to invalid character number', 15: 'reference to binary entity', 16: 'reference to external entity in attribute', 17: 'XML or text declaration not at start of entity', 18: 'unknown encoding', 19: 'encoding specified in XML declaration is incorrect', 20: 'unclosed CDATA section', 21: 'error in processing external entity reference', 22: 'document is not standalone', 23: 'unexpected parser state - please send a bug report', 24: 'entity declared in parameter entity', 25: 'requested feature requires XML_DTD support in Expat', 26: 'cannot change setting once parsing has begun', 27: 'unbound prefix', 28: 'must not undeclare prefix', 29: 'incomplete markup in parameter entity', 30: 'XML declaration not well-formed', 31: 'text declaration not well-formed', 32: 'illegal character(s) in public id', 33: 'parser suspended', 34: 'parser not suspended', 35: 'parsing aborted', 36: 'parsing finished', 37: 'cannot suspend in external parameter entity', 38: 'reserved prefix (xml) must not be undeclared or bound to another namespace name', 39: 'reserved prefix (xmlns) must not be declared or undeclared', 40: 'prefix must not be bound to one of the reserved namespace names', 41: 'invalid argument', 42: 'a successful prior call to function XML_GetBuffer is required', 43: 'limit on input amplification factor (from DTD and entities) breached'}
+2026-05-20 17:27:29 cheatsheet - __init__ - В шаблоне должны быть поля { { full_name } }
+2026-05-20 17:31:29 client - __init__ - ========================================
+2026-05-20 17:31:29 client - __init__ - Инициализация программы
+2026-05-20 17:31:29 client - __init__ - ColorScheme.Dark
+2026-05-20 17:31:29 config - import_from_config_file - config.json загружен
+2026-05-20 17:31:40 cheatsheet - __init__ - {1: 'out of memory', 2: 'syntax error', 3: 'no element found', 4: 'not well-formed (invalid token)', 5: 'unclosed token', 6: 'partial character', 7: 'mismatched tag', 8: 'duplicate attribute', 9: 'junk after document element', 10: 'illegal parameter entity reference', 11: 'undefined entity', 12: 'recursive entity reference', 13: 'asynchronous entity', 14: 'reference to invalid character number', 15: 'reference to binary entity', 16: 'reference to external entity in attribute', 17: 'XML or text declaration not at start of entity', 18: 'unknown encoding', 19: 'encoding specified in XML declaration is incorrect', 20: 'unclosed CDATA section', 21: 'error in processing external entity reference', 22: 'document is not standalone', 23: 'unexpected parser state - please send a bug report', 24: 'entity declared in parameter entity', 25: 'requested feature requires XML_DTD support in Expat', 26: 'cannot change setting once parsing has begun', 27: 'unbound prefix', 28: 'must not undeclare prefix', 29: 'incomplete markup in parameter entity', 30: 'XML declaration not well-formed', 31: 'text declaration not well-formed', 32: 'illegal character(s) in public id', 33: 'parser suspended', 34: 'parser not suspended', 35: 'parsing aborted', 36: 'parsing finished', 37: 'cannot suspend in external parameter entity', 38: 'reserved prefix (xml) must not be undeclared or bound to another namespace name', 39: 'reserved prefix (xmlns) must not be declared or undeclared', 40: 'prefix must not be bound to one of the reserved namespace names', 41: 'invalid argument', 42: 'a successful prior call to function XML_GetBuffer is required', 43: 'limit on input amplification factor (from DTD and entities) breached'}
+2026-05-20 17:31:40 cheatsheet - __init__ - В шаблоне должны быть поля:
+{ { full_name } }
+{ { login } }
+{ { email } }
+{ { password } }
+{ { phone } }
+
+2026-05-20 17:42:16 client - __init__ - ========================================
+2026-05-20 17:42:16 client - __init__ - Инициализация программы
+2026-05-20 17:42:16 client - __init__ - ColorScheme.Dark
+2026-05-20 17:42:16 config - import_from_config_file - config.json загружен
+2026-05-20 17:42:30 cheatsheet - __init__ - {1: 'out of memory', 2: 'syntax error', 3: 'no element found', 4: 'not well-formed (invalid token)', 5: 'unclosed token', 6: 'partial character', 7: 'mismatched tag', 8: 'duplicate attribute', 9: 'junk after document element', 10: 'illegal parameter entity reference', 11: 'undefined entity', 12: 'recursive entity reference', 13: 'asynchronous entity', 14: 'reference to invalid character number', 15: 'reference to binary entity', 16: 'reference to external entity in attribute', 17: 'XML or text declaration not at start of entity', 18: 'unknown encoding', 19: 'encoding specified in XML declaration is incorrect', 20: 'unclosed CDATA section', 21: 'error in processing external entity reference', 22: 'document is not standalone', 23: 'unexpected parser state - please send a bug report', 24: 'entity declared in parameter entity', 25: 'requested feature requires XML_DTD support in Expat', 26: 'cannot change setting once parsing has begun', 27: 'unbound prefix', 28: 'must not undeclare prefix', 29: 'incomplete markup in parameter entity', 30: 'XML declaration not well-formed', 31: 'text declaration not well-formed', 32: 'illegal character(s) in public id', 33: 'parser suspended', 34: 'parser not suspended', 35: 'parsing aborted', 36: 'parsing finished', 37: 'cannot suspend in external parameter entity', 38: 'reserved prefix (xml) must not be undeclared or bound to another namespace name', 39: 'reserved prefix (xmlns) must not be declared or undeclared', 40: 'prefix must not be bound to one of the reserved namespace names', 41: 'invalid argument', 42: 'a successful prior call to function XML_GetBuffer is required', 43: 'limit on input amplification factor (from DTD and entities) breached'}
+2026-05-20 17:42:30 cheatsheet - __init__ - 
+В шаблоне должны быть поля:
+{ { full_name } }
+{ { login } }
+{ { email } }
+{ { password } }
+{ { phone } }
+
+2026-05-20 17:43:51 client - __init__ - ========================================
+2026-05-20 17:43:51 client - __init__ - Инициализация программы
+2026-05-20 17:43:51 client - __init__ - ColorScheme.Dark
+2026-05-20 17:43:51 config - import_from_config_file - config.json загружен
+2026-05-20 17:52:15 client - __init__ - ========================================
+2026-05-20 17:52:15 client - __init__ - Инициализация программы
+2026-05-20 17:52:15 client - __init__ - ColorScheme.Dark
+2026-05-20 17:52:15 config - import_from_config_file - config.json загружен
+2026-05-20 17:52:26 cheatsheet - __init__ - {1: 'out of memory', 2: 'syntax error', 3: 'no element found', 4: 'not well-formed (invalid token)', 5: 'unclosed token', 6: 'partial character', 7: 'mismatched tag', 8: 'duplicate attribute', 9: 'junk after document element', 10: 'illegal parameter entity reference', 11: 'undefined entity', 12: 'recursive entity reference', 13: 'asynchronous entity', 14: 'reference to invalid character number', 15: 'reference to binary entity', 16: 'reference to external entity in attribute', 17: 'XML or text declaration not at start of entity', 18: 'unknown encoding', 19: 'encoding specified in XML declaration is incorrect', 20: 'unclosed CDATA section', 21: 'error in processing external entity reference', 22: 'document is not standalone', 23: 'unexpected parser state - please send a bug report', 24: 'entity declared in parameter entity', 25: 'requested feature requires XML_DTD support in Expat', 26: 'cannot change setting once parsing has begun', 27: 'unbound prefix', 28: 'must not undeclare prefix', 29: 'incomplete markup in parameter entity', 30: 'XML declaration not well-formed', 31: 'text declaration not well-formed', 32: 'illegal character(s) in public id', 33: 'parser suspended', 34: 'parser not suspended', 35: 'parsing aborted', 36: 'parsing finished', 37: 'cannot suspend in external parameter entity', 38: 'reserved prefix (xml) must not be undeclared or bound to another namespace name', 39: 'reserved prefix (xmlns) must not be declared or undeclared', 40: 'prefix must not be bound to one of the reserved namespace names', 41: 'invalid argument', 42: 'a successful prior call to function XML_GetBuffer is required', 43: 'limit on input amplification factor (from DTD and entities) breached'}
+2026-05-20 17:52:26 cheatsheet - __init__ - 
+В шаблоне должны быть поля:
+{ { full_name } }
+{ { login } }
+{ { email } }
+{ { password } }
+{ { phone } }
+
+2026-05-20 17:55:30 client - __init__ - ========================================
+2026-05-20 17:55:30 client - __init__ - Инициализация программы
+2026-05-20 17:55:30 client - __init__ - ColorScheme.Dark
+2026-05-20 17:55:30 config - import_from_config_file - config.json загружен
+2026-05-20 17:55:32 client - closeEvent - exit
+2026-05-20 18:00:48 client - __init__ - ========================================
+2026-05-20 18:00:48 client - __init__ - Инициализация программы
+2026-05-20 18:00:48 client - __init__ - ColorScheme.Dark
+2026-05-20 18:00:48 config - import_from_config_file - config.json загружен
+2026-05-20 18:00:51 client - closeEvent - папка temp очищена
+2026-05-20 18:00:58 client - __init__ - ========================================
+2026-05-20 18:00:58 client - __init__ - Инициализация программы
+2026-05-20 18:00:58 client - __init__ - ColorScheme.Dark
+2026-05-20 18:00:58 config - import_from_config_file - config.json загружен
+2026-05-20 18:01:15 client - closeEvent - папка temp очищена
+2026-05-20 18:08:35 client - __init__ - ========================================
+2026-05-20 18:08:35 client - __init__ - Инициализация программы
+2026-05-20 18:08:35 client - __init__ - ColorScheme.Dark
+2026-05-20 18:08:35 config - import_from_config_file - config.json загружен
+2026-05-20 18:08:47 cheatsheet - __init__ - {1: 'out of memory', 2: 'syntax error', 3: 'no element found', 4: 'not well-formed (invalid token)', 5: 'unclosed token', 6: 'partial character', 7: 'mismatched tag', 8: 'duplicate attribute', 9: 'junk after document element', 10: 'illegal parameter entity reference', 11: 'undefined entity', 12: 'recursive entity reference', 13: 'asynchronous entity', 14: 'reference to invalid character number', 15: 'reference to binary entity', 16: 'reference to external entity in attribute', 17: 'XML or text declaration not at start of entity', 18: 'unknown encoding', 19: 'encoding specified in XML declaration is incorrect', 20: 'unclosed CDATA section', 21: 'error in processing external entity reference', 22: 'document is not standalone', 23: 'unexpected parser state - please send a bug report', 24: 'entity declared in parameter entity', 25: 'requested feature requires XML_DTD support in Expat', 26: 'cannot change setting once parsing has begun', 27: 'unbound prefix', 28: 'must not undeclare prefix', 29: 'incomplete markup in parameter entity', 30: 'XML declaration not well-formed', 31: 'text declaration not well-formed', 32: 'illegal character(s) in public id', 33: 'parser suspended', 34: 'parser not suspended', 35: 'parsing aborted', 36: 'parsing finished', 37: 'cannot suspend in external parameter entity', 38: 'reserved prefix (xml) must not be undeclared or bound to another namespace name', 39: 'reserved prefix (xmlns) must not be declared or undeclared', 40: 'prefix must not be bound to one of the reserved namespace names', 41: 'invalid argument', 42: 'a successful prior call to function XML_GetBuffer is required', 43: 'limit on input amplification factor (from DTD and entities) breached'}
+2026-05-20 18:08:47 cheatsheet - __init__ - 
+В шаблоне должны быть поля:
+{ { full_name } }
+{ { login } }
+{ { email } }
+{ { password } }
+{ { phone } }
+
+2026-05-20 18:08:51 client - closeEvent - Папка temp очищена
+2026-05-20 18:09:27 client - __init__ - ========================================
+2026-05-20 18:09:27 client - __init__ - Инициализация программы
+2026-05-20 18:09:27 client - __init__ - ColorScheme.Dark
+2026-05-20 18:09:27 config - import_from_config_file - config.json загружен
+2026-05-20 18:09:34 client - check_data - Не заполенно Внутренний номер телефона
+2026-05-20 18:09:51 client - closeEvent - Папка temp очищена
+2026-05-20 18:09:59 client - __init__ - ========================================
+2026-05-20 18:09:59 client - __init__ - Инициализация программы
+2026-05-20 18:09:59 client - __init__ - ColorScheme.Dark
+2026-05-20 18:09:59 config - import_from_config_file - config.json загружен
+2026-05-20 18:10:26 cheatsheet - __init__ - Файл шаблона не существует. Создан шаблон поумолчанию
+2026-05-20 18:10:26 cheatsheet - __init__ - 
+В шаблоне должны быть поля:
+{ { full_name } }
+{ { login } }
+{ { email } }
+{ { password } }
+{ { phone } }
+
+2026-05-20 18:10:32 client - closeEvent - Папка temp очищена
+2026-05-20 18:15:11 client - __init__ - ========================================
+2026-05-20 18:15:11 client - __init__ - Инициализация программы
+2026-05-20 18:15:11 client - __init__ - ColorScheme.Dark
+2026-05-20 18:15:11 config - import_from_config_file - config.json загружен
+2026-05-20 18:15:13 client - closeEvent - Папка temp очищена
+2026-05-20 18:19:06 client - __init__ - ========================================
+2026-05-20 18:19:06 client - __init__ - Инициализация программы
+2026-05-20 18:19:06 config - import_from_config_file - config.json загружен

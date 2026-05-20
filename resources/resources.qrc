@@ -1,0 +1,30 @@
+<RCC>
+  <qresource prefix="dark_theme">
+    <file>icons/dark_theme/new_user.svg</file>
+    <file>icons/dark_theme/open.svg</file>
+    <file>icons/dark_theme/user.svg</file>
+    <file>icons/dark_theme/settings.svg</file>
+    <file>icons/dark_theme/save.svg</file>
+    <file>icons/dark_theme/restart.svg</file>
+    <file>icons/dark_theme/reset.svg</file>
+    <file>icons/dark_theme/print.svg</file>
+    <file>icons/dark_theme/plus.svg</file>
+    <file>icons/dark_theme/minus.svg</file>
+    <file>icons/dark_theme/delete.svg</file>
+    <file>icons/dark_theme/copy.svg</file>
+  </qresource>
+  <qresource prefix="light_theme">
+    <file>icons/light_theme/plus.svg</file>
+    <file>icons/light_theme/copy.svg</file>
+    <file>icons/light_theme/save.svg</file>
+    <file>icons/light_theme/print.svg</file>
+    <file>icons/light_theme/new_user.svg</file>
+    <file>icons/light_theme/reset.svg</file>
+    <file>icons/light_theme/restart.svg</file>
+    <file>icons/light_theme/open.svg</file>
+    <file>icons/light_theme/user.svg</file>
+    <file>icons/light_theme/settings.svg</file>
+    <file>icons/light_theme/delete.svg</file>
+    <file>icons/light_theme/minus.svg</file>
+  </qresource>
+</RCC>
