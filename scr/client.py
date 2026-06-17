@@ -4,7 +4,7 @@ import logging
 
 from pathlib import Path
 
-from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QInputDialog, QLineEdit, QDialog, QPushButton
+from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QInputDialog,QLineEdit, QDialog, QPushButton
 from PySide6.QtCore import Qt, QStringListModel, QObject
 from PySide6.QtGui import QGuiApplication, QIcon, QAction
 
@@ -14,6 +14,7 @@ from scr.cheatsheet import CheatSheet
 from scr.keepass import KeePass
 from scr.config import Config
 from scr.logging_config import init_app_logging
+from scr.sqllite import SQLite
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -30,6 +31,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                      'database': None,
                      'emails_list': [],
                      'domains_list': []}
+        self.sqlite = SQLite()
 
         # UI
         self.setupUi(self)
@@ -47,12 +49,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # line edits
         self.lineEdit_1.textChanged.connect(self.update_fields)
-        self.lineEdit_1.textChanged.connect(lambda: self.update_data('Фамилия и Имя', self.lineEdit_1.text()))
+        self.lineEdit_1.textChanged.connect(lambda: self.update_data('full_name', self.lineEdit_1.text()))
         self.lineEdit_4.textChanged.connect(self.save_number)
-        self.lineEdit_4.textChanged.connect(lambda: self.update_data('Внутренний номер телефона', self.lineEdit_4.text()))
-        self.lineEdit_6.textChanged.connect(lambda: self.update_data('Email', self.lineEdit_6.text()))
-        self.lineEdit_8.textChanged.connect(lambda: self.update_data('Пароль', self.lineEdit_8.text()))
-        self.lineEdit_9.textChanged.connect(lambda: self.update_data('Логин', self.lineEdit_9.text()))
+        self.lineEdit_4.textChanged.connect(lambda: self.update_data('phone', self.lineEdit_4.text()))
+        self.lineEdit_6.textChanged.connect(lambda: self.update_data('email', self.lineEdit_6.text()))
+        self.lineEdit_8.textChanged.connect(lambda: self.update_data('password', self.lineEdit_8.text()))
+        self.lineEdit_9.textChanged.connect(lambda: self.update_data('login', self.lineEdit_9.text()))
 
         # buttons
         self.pushButton.clicked.connect(self.generate_password)
@@ -62,6 +64,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.action_2.triggered.connect(self.print)
         self.action_3.triggered.connect(self.save)
         self.action_4.triggered.connect(self.open_settings)
+        # self.action_5.triggered.connect()
 
         # settings window
         self.settings = Settings(parent=self)
@@ -94,7 +97,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             last_name = full_name
             first_name = ' '
-        self.update_data('Фамилия и Имя', full_name)
+        self.update_data('full_name', full_name)
 
         self.lineEdit_2.setText(last_name)
         self.lineEdit_3.setText(first_name)
@@ -110,7 +113,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         maildomain = self.comboBox.currentText()
         email = f"{self.transliterate(self.lineEdit_2.text().lower())}{maildomain}"
         self.lineEdit_6.setText(email)
-        self.update_data('Email', email)
+        self.update_data('email', email)
 
     def set_domain(self):
         domain = self.comboBox_2.currentText()
@@ -119,7 +122,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def save_number(self):
         phone = self.lineEdit_4.text()
-        self.update_data('Внутренний номер телефона', phone)
+        self.update_data('phone', phone)
 
     def generate_password(self):
         uppercase_letters = list(string.ascii_uppercase)
@@ -147,7 +150,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         password = ''.join(password)
 
         self.lineEdit_8.setText(password)
-        self.update_data('Пароль', password)
+        self.update_data('password', password)
 
     def clear_all(self):
         for lineEdit in [self.lineEdit_1, self.lineEdit_2, self.lineEdit_3, self.lineEdit_4,
@@ -178,13 +181,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pushButton_12.clicked.connect(lambda: QApplication.clipboard().setText(self.textEdit_2.toPlainText()))
 
     def print(self):
-        if self.check_data(['Фамилия и Имя', 'Внутренний номер телефона', 'Email']):
+        if self.check_data(['full_name', 'phone', 'email']):
             cheat_sheet = CheatSheet(
-                full_name=self.data['Фамилия и Имя'],
-                login=self.data['Логин'],
-                email=self.data['Email'],
-                password=self.data['Пароль'],
-                phone=self.data['Внутренний номер телефона']
+                full_name=self.data['full_name'],
+                login=self.data['login'],
+                email=self.data['email'],
+                password=self.data['password'],
+                phone=self.data['phone']
             )
             cheat_sheet.make_cheat_sheet()
             message = cheat_sheet.get_message()
@@ -193,7 +196,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.statusBar.showMessage(message)
 
     def save(self):
-        if self.check_data(['Логин', 'Пароль']):
+        if self.check_data(['login', 'password', 'phone']):
             # Download database
             self.logger.info('Поиск файла базы данных')
             database = self.data['database']
@@ -206,7 +209,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             # Enter password database
             self.logger.info('Инициализация ввода пароля')
-            password = self.get_password_database()
+            password = self.get_database_password()
             if password:
                 domain = self.data['domain']
                 keepass = KeePass(database=database, password=password)
@@ -218,20 +221,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.statusBar.showMessage(message)
                 else:
                     # save database credentials
-                    self.logger.info('Пароль введет верно')
-                    self.update_data('password', password)
+                    self.logger.info('password введет верно')
+                    self.update_data('database_password', password)
 
                     #check user exist
-                    if keepass.get_user(self.data['Логин']):
+                    if keepass.get_user(self.data['login']):
                         self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
-                        self.statusBar.showMessage(f"Пользователь {self.data['Логин']} уже существует", timeout=1000)
+                        self.statusBar.showMessage(f"Пользователь {self.data['login']} уже существует", timeout=1000)
                     else:
-                        keepass.set_user(domain, self.data['Логин'], self.data['Пароль'])
+                        self.sqlite.set_data(self.data['full_name'], self.data['login'], self.data['email'], self.data['phone'])
+                        keepass.set_user(domain, self.data['login'], self.data['database_password'])
                         self.statusBar.setStyleSheet("QStatusBar { color: rgba(0, 255, 0, 255); }")
-                        self.statusBar.showMessage(f'{keepass.get_message()}. {self.data['Логин']} добавлен', timeout=1000)
+                        self.statusBar.showMessage(f'{keepass.get_message()}. {self.data['login']} добавлен', timeout=1000)
 
     def check_data(self, keys: list):
-        #check database[key] exist
         result = True
         for key in keys:
             if self.data.get(key) is None:
@@ -245,11 +248,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def update_data(self, key, value):
         self.data[key] = value
 
-    def get_password_database(self):
-        password = self.data.get('password')
+    def get_database_password(self):
+        password = self.data.get('database_password')
+        self.logger.info(password)
         if password is None:
             password, ok = QInputDialog.getText(self,
-                                            'Пароль от базы',
+                                            'password от базы',
                                             'Введите пароль:',
                                             QLineEdit.EchoMode.Password,
                                             '')
@@ -291,7 +295,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 path := self.get_database_file(),
                 self.settings.ui.lineEdit.setText(path) if path else None,
                 self.data.__setitem__('database', path) if path else None,
-                self.data.pop('password', None)
+                self.data.pop('database_password', None)
             )
         )
         self.settings.ui.lineEdit.textChanged.connect(
@@ -389,6 +393,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             else:
                 result += char
         return result
+
+    def show_users(self):
+        pass
 
     @staticmethod
     def copy_text(lineEdit, button):

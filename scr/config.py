@@ -3,6 +3,7 @@ import logging
 
 from pathlib import Path
 
+
 class Config:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
@@ -33,7 +34,7 @@ class Config:
        return self.config_data['emails']
 
     @emails.setter
-    def emails(self,email):
+    def emails(self, email):
         self.config_data['emails'].apppend(email)
 
     @property
@@ -53,3 +54,4 @@ class Config:
         with open(self.config_file, 'r', encoding='utf-8') as file:
             self.logger.info('config.json загружен')
             return json.load(file)
+

@@ -23,10 +23,11 @@ class CheatSheet:
         if not self.template_file.exists():
             self.template_file.parent.mkdir(parents=True, exist_ok=True)
             self.create_default_template()
-            self.message = (f'Файл шаблона не существует. Создан шаблон поумолчанию'
+            self.message = (
+               'Файл шаблона не существует. Создан шаблон поумолчанию'
                             )
             self.logger.info(self.message)
-            self.logger.info(f'\nВ шаблоне должны быть поля:\n'
+            self.logger.info('\nВ шаблоне должны быть поля:\n'
                              f'{{ {{ full_name }} }}\n'
                              f'{{ {{ login }} }}\n'
                              f'{{ {{ email }} }}\n'
@@ -38,11 +39,11 @@ class CheatSheet:
 
     def set_data(self):
         text = {
-            "full_name" : self.full_name,
-            "login" : self.login,
-            "email" : self.email,
-            "password" : self.password,
-            "phone" : self.phone,
+            "full_name": self.full_name,
+            "login": self.login,
+            "email": self.email,
+            "password": self.password,
+            "phone": self.phone,
             }
         return text
 

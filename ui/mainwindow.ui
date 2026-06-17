@@ -492,6 +492,7 @@
     <addaction name="action_2"/>
     <addaction name="action_3"/>
     <addaction name="action_4"/>
+    <addaction name="action_5"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -515,6 +516,7 @@
    <addaction name="action_2"/>
    <addaction name="action_3"/>
    <addaction name="action_4"/>
+   <addaction name="action_5"/>
   </widget>
   <action name="action">
    <property name="icon">
@@ -562,6 +564,18 @@
    </property>
    <property name="iconName" stdset="0">
     <string>settings</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/dark_theme/icons/dark_theme/open.svg</normaloff>:/dark_theme/icons/dark_theme/open.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Пользователи</string>
+   </property>
+   <property name="iconName" stdset="0">
+    <string>users</string>
    </property>
   </action>
  </widget>

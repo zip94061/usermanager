@@ -58,6 +58,11 @@ class Ui_MainWindow(object):
         icon4 = QIcon()
         icon4.addFile(u":/dark_theme/icons/dark_theme/settings.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.action_4.setIcon(icon4)
+        self.action_5 = QAction(MainWindow)
+        self.action_5.setObjectName(u"action_5")
+        icon5 = QIcon()
+        icon5.addFile(u":/dark_theme/icons/dark_theme/open.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.action_5.setIcon(icon5)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.layoutWidget = QWidget(self.centralwidget)
@@ -89,9 +94,9 @@ class Ui_MainWindow(object):
 
         self.pushButton_1 = QPushButton(self.layoutWidget)
         self.pushButton_1.setObjectName(u"pushButton_1")
-        icon5 = QIcon()
-        icon5.addFile(u":/dark_theme/icons/dark_theme/copy.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.pushButton_1.setIcon(icon5)
+        icon6 = QIcon()
+        icon6.addFile(u":/dark_theme/icons/dark_theme/copy.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton_1.setIcon(icon6)
         self.pushButton_1.setIconSize(QSize(16, 16))
 
         self.horizontalLayout_2.addWidget(self.pushButton_1)
@@ -115,7 +120,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.layoutWidget)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setIcon(icon5)
+        self.pushButton_2.setIcon(icon6)
 
         self.horizontalLayout_3.addWidget(self.pushButton_2)
 
@@ -138,7 +143,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_3 = QPushButton(self.layoutWidget)
         self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setIcon(icon5)
+        self.pushButton_3.setIcon(icon6)
 
         self.horizontalLayout_4.addWidget(self.pushButton_3)
 
@@ -161,7 +166,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_4 = QPushButton(self.layoutWidget)
         self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setIcon(icon5)
+        self.pushButton_4.setIcon(icon6)
 
         self.horizontalLayout_5.addWidget(self.pushButton_4)
 
@@ -184,7 +189,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_5 = QPushButton(self.layoutWidget)
         self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setIcon(icon5)
+        self.pushButton_5.setIcon(icon6)
 
         self.horizontalLayout_6.addWidget(self.pushButton_5)
 
@@ -207,7 +212,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_6 = QPushButton(self.layoutWidget)
         self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setIcon(icon5)
+        self.pushButton_6.setIcon(icon6)
 
         self.horizontalLayout_7.addWidget(self.pushButton_6)
 
@@ -236,7 +241,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_7 = QPushButton(self.layoutWidget)
         self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setIcon(icon5)
+        self.pushButton_7.setIcon(icon6)
 
         self.horizontalLayout_8.addWidget(self.pushButton_7)
 
@@ -259,15 +264,15 @@ class Ui_MainWindow(object):
 
         self.pushButton = QPushButton(self.layoutWidget)
         self.pushButton.setObjectName(u"pushButton")
-        icon6 = QIcon()
-        icon6.addFile(u":/dark_theme/icons/dark_theme/reset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.pushButton.setIcon(icon6)
+        icon7 = QIcon()
+        icon7.addFile(u":/dark_theme/icons/dark_theme/reset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton.setIcon(icon7)
 
         self.horizontalLayout.addWidget(self.pushButton)
 
         self.pushButton_8 = QPushButton(self.layoutWidget)
         self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setIcon(icon5)
+        self.pushButton_8.setIcon(icon6)
 
         self.horizontalLayout.addWidget(self.pushButton_8)
 
@@ -290,7 +295,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_9 = QPushButton(self.layoutWidget)
         self.pushButton_9.setObjectName(u"pushButton_9")
-        self.pushButton_9.setIcon(icon5)
+        self.pushButton_9.setIcon(icon6)
 
         self.horizontalLayout_9.addWidget(self.pushButton_9)
 
@@ -321,7 +326,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_12 = QPushButton(self.layoutWidget)
         self.pushButton_12.setObjectName(u"pushButton_12")
-        self.pushButton_12.setIcon(icon5)
+        self.pushButton_12.setIcon(icon6)
         self.pushButton_12.setIconSize(QSize(16, 16))
 
         self.verticalLayout_2.addWidget(self.pushButton_12)
@@ -356,10 +361,12 @@ class Ui_MainWindow(object):
         self.menu.addAction(self.action_2)
         self.menu.addAction(self.action_3)
         self.menu.addAction(self.action_4)
+        self.menu.addAction(self.action_5)
         self.toolBar.addAction(self.action)
         self.toolBar.addAction(self.action_2)
         self.toolBar.addAction(self.action_3)
         self.toolBar.addAction(self.action_4)
+        self.toolBar.addAction(self.action_5)
 
         self.retranslateUi(MainWindow)
 
@@ -376,6 +383,8 @@ class Ui_MainWindow(object):
         self.action_3.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"save", None))
         self.action_4.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
         self.action_4.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"settings", None))
+        self.action_5.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438", None))
+        self.action_5.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"users", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:700;\">\u0424\u0430\u043c\u0438\u043b\u0438\u044f \u0438 \u0418\u043c\u044f</span></p></body></html>", None))
         self.pushButton_1.setText("")
         self.pushButton_1.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"copy", None))

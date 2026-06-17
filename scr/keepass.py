@@ -10,7 +10,6 @@ class KeePass:
         self.message = ''
         self.database = self.set_database(database, password)
 
-
     def get_user(self, username):
         user = self.database.find_entries(title=username, first=True)
         if user is None:
@@ -26,7 +25,7 @@ class KeePass:
                 self.set_group(groupname)
                 self.logger.info(f'Создана группа {groupname}')
                 self.database.save()
-                self.logger.info(f'База данных сохранена')
+                self.logger.info('База данных сохранена')
             else:
                 self.logger.info(f'Найдена группа {groupname}')
             group = self.get_group(groupname)
@@ -35,7 +34,7 @@ class KeePass:
             self.database.add_entry(group, username, username, password)
             self.logger.info(f'Добавлена запись {username}')
             self.database.save()
-            self.logger.info(f'База данных сохранена')
+            self.logger.info('База данных сохранена')
 
     def get_group(self, groupname):
         group = self.database.find_groups(name=groupname, first=True)
@@ -70,3 +69,7 @@ class KeePass:
 
     def get_message(self):
         return self.message
+
+    def get_users(self):
+        users = [user for user in self.database.entries]
+        return users
