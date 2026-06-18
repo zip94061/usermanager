@@ -4,12 +4,21 @@ import logging
 
 from pathlib import Path
 
-from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QInputDialog,QLineEdit, QDialog, QPushButton
+from PySide6.QtWidgets import (
+        QApplication,
+        QMainWindow,
+        QFileDialog,
+        QInputDialog,
+        QLineEdit,
+        QDialog,
+        QPushButton
+        )
 from PySide6.QtCore import Qt, QStringListModel, QObject
 from PySide6.QtGui import QGuiApplication, QIcon, QAction
 
 from scr.mainwindow_ui import Ui_MainWindow
-from scr.settings_ui import Ui_Dialog
+from scr.settings_ui import Ui_Settings
+from scr.users_ui import Ui_Users
 from scr.cheatsheet import CheatSheet
 from scr.keepass import KeePass
 from scr.config import Config
@@ -49,12 +58,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # line edits
         self.lineEdit_1.textChanged.connect(self.update_fields)
-        self.lineEdit_1.textChanged.connect(lambda: self.update_data('full_name', self.lineEdit_1.text()))
+        self.lineEdit_1.textChanged.connect(
+                lambda: self.update_data('full_name', self.lineEdit_1.text())
+                )
         self.lineEdit_4.textChanged.connect(self.save_number)
-        self.lineEdit_4.textChanged.connect(lambda: self.update_data('phone', self.lineEdit_4.text()))
-        self.lineEdit_6.textChanged.connect(lambda: self.update_data('email', self.lineEdit_6.text()))
-        self.lineEdit_8.textChanged.connect(lambda: self.update_data('password', self.lineEdit_8.text()))
-        self.lineEdit_9.textChanged.connect(lambda: self.update_data('login', self.lineEdit_9.text()))
+        self.lineEdit_4.textChanged.connect(
+                lambda: self.update_data('phone', self.lineEdit_4.text())
+                )
+        self.lineEdit_6.textChanged.connect(
+                lambda: self.update_data('email', self.lineEdit_6.text())
+                )
+        self.lineEdit_8.textChanged.connect(
+                lambda: self.update_data('password', self.lineEdit_8.text())
+                                            )
+        self.lineEdit_9.textChanged.connect(
+                lambda: self.update_data('login', self.lineEdit_9.text())
+                )
 
         # buttons
         self.pushButton.clicked.connect(self.generate_password)
@@ -64,7 +83,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.action_2.triggered.connect(self.print)
         self.action_3.triggered.connect(self.save)
         self.action_4.triggered.connect(self.open_settings)
-        # self.action_5.triggered.connect()
+        self.action_5.triggered.connect(self.open_users)
 
         # settings window
         self.settings = Settings(parent=self)
@@ -75,13 +94,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.model_2.setStringList(self.data['domains_list'])
         self.settings.ui.listView_2.setModel(self.model_2)
 
+        # users window
+        self.users = Users(parent=self)
+        self.model_3 = QStringListModel()
+        self.model_3.setStringList(self.sqlite.get_fullname())
+        self.users.ui.listView.setModel(self.model_3)
+
         # combo boxes
         self.comboBox.currentIndexChanged.connect(self.update_email)
         self.comboBox_2.currentIndexChanged.connect(self.set_domain)
 
         self.generate_password()
         self.set_theme_icons()
-        QGuiApplication.styleHints().colorSchemeChanged.connect(self.set_theme_icons)
+        QGuiApplication.styleHints().colorSchemeChanged.connect(
+                self.set_theme_icons
+                )
 
     def closeEvent(self, event, /):
         temp = Path('temp')
@@ -103,7 +130,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lineEdit_3.setText(first_name)
         self.lineEdit_6.setText(self.transliterate(last_name.lower()))
 
-        login = f"{self.transliterate(first_name[0].lower())}{self.transliterate(last_name.lower())}"
+        login = "{0}{1}".format(
+                self.transliterate(first_name[0].lower()),
+                self.transliterate(last_name.lower())
+                )
         self.lineEdit_9.setText(login)
         self.update_data('login', login)
         self.update_email()
@@ -111,14 +141,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def update_email(self):
         self.lineEdit_6.clear()
         maildomain = self.comboBox.currentText()
-        email = f"{self.transliterate(self.lineEdit_2.text().lower())}{maildomain}"
+        email = "{0}{1}".format(
+                self.transliterate(self.lineEdit_2.text().lower()),
+                maildomain
+                )
         self.lineEdit_6.setText(email)
         self.update_data('email', email)
 
     def set_domain(self):
         domain = self.comboBox_2.currentText()
         self.data['domain'] = domain
-
 
     def save_number(self):
         phone = self.lineEdit_4.text()
@@ -153,11 +185,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_data('password', password)
 
     def clear_all(self):
-        for lineEdit in [self.lineEdit_1, self.lineEdit_2, self.lineEdit_3, self.lineEdit_4,
-                         self.lineEdit_5, self.lineEdit_6, self.lineEdit_7, self.lineEdit_8,
-                         self.lineEdit_9]:
+        for lineEdit in [
+                self.lineEdit_1, self.lineEdit_2, self.lineEdit_3,
+                self.lineEdit_4, self.lineEdit_5, self.lineEdit_6,
+                self.lineEdit_7, self.lineEdit_8, self.lineEdit_9
+                ]:
             lineEdit.clear()
-        self.textEdit.clear()
+        self.textEdit_2.clear()
         self.generate_password()
 
     def update_textEdit_2(self):
@@ -178,7 +212,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.copy_text(self.lineEdit_7, self.pushButton_7)
         self.copy_text(self.lineEdit_8, self.pushButton_8)
         self.copy_text(self.lineEdit_9, self.pushButton_9)
-        self.pushButton_12.clicked.connect(lambda: QApplication.clipboard().setText(self.textEdit_2.toPlainText()))
+        self.pushButton_12.clicked.connect(
+                lambda: QApplication.clipboard().setText(
+                    self.textEdit_2.toPlainText()
+                    )
+                )
 
     def print(self):
         if self.check_data(['full_name', 'phone', 'email']):
@@ -192,7 +230,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             cheat_sheet.make_cheat_sheet()
             message = cheat_sheet.get_message()
             if message:
-                self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
+                self.statusBar.setStyleSheet(
+                        "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                        )
                 self.statusBar.showMessage(message)
 
     def save(self):
@@ -201,7 +241,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.logger.info('Поиск файла базы данных')
             database = self.data['database']
             if not database or not Path(database).exists():
-                self.logger.info('Файл не найден. Инициализация подключения файла')
+                self.logger.info(
+                        'Файл не найден. Инициализация подключения файла'
+                        )
                 database = self.get_database_file()
             self.logger.info('Файл найден')
             self.update_data('database', database)
@@ -217,29 +259,57 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if not keepass.get_status():
                     message = keepass.get_message()
                     self.logger.error(message)
-                    self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
+                    self.statusBar.setStyleSheet(
+                            "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                                                 )
                     self.statusBar.showMessage(message)
                 else:
                     # save database credentials
                     self.logger.info('password введет верно')
                     self.update_data('database_password', password)
 
-                    #check user exist
+                    # check user exist
                     if keepass.get_user(self.data['login']):
-                        self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
-                        self.statusBar.showMessage(f"Пользователь {self.data['login']} уже существует", timeout=1000)
+                        self.statusBar.setStyleSheet(
+                                "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                                )
+                        self.statusBar.showMessage(
+                               "Пользователь {0} уже существует".format(
+                                   self.data['login']
+                                   ),
+                               timeout=1000
+                                )
                     else:
-                        self.sqlite.set_data(self.data['full_name'], self.data['login'], self.data['email'], self.data['phone'])
-                        keepass.set_user(domain, self.data['login'], self.data['database_password'])
-                        self.statusBar.setStyleSheet("QStatusBar { color: rgba(0, 255, 0, 255); }")
-                        self.statusBar.showMessage(f'{keepass.get_message()}. {self.data['login']} добавлен', timeout=1000)
+                        self.sqlite.set_data(
+                                self.data['full_name'],
+                                self.data['login'],
+                                self.data['email'],
+                                self.data['phone']
+                                )
+                        keepass.set_user(
+                                domain,
+                                self.data['login'],
+                                self.data['database_password']
+                                )
+                        self.statusBar.setStyleSheet(
+                                "QStatusBar { color: rgba(0, 255, 0, 255); }"
+                                )
+                        self.statusBar.showMessage(
+                                '{0}. {1} добавлен'.format(
+                                    keepass.get_message(),
+                                    self.data['login']
+                                    ),
+                                timeout=1000
+                                )
 
     def check_data(self, keys: list):
         result = True
         for key in keys:
             if self.data.get(key) is None:
                 message = f'Не заполенно {key}'
-                self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
+                self.statusBar.setStyleSheet(
+                        "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                        )
                 self.statusBar.showMessage(message, timeout=1000)
                 self.logger.info(message)
                 result = False
@@ -250,18 +320,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def get_database_password(self):
         password = self.data.get('database_password')
-        self.logger.info(password)
         if password is None:
-            password, ok = QInputDialog.getText(self,
-                                            'password от базы',
-                                            'Введите пароль:',
-                                            QLineEdit.EchoMode.Password,
-                                            '')
+            password, ok = QInputDialog.getText(
+                    self,
+                    'password от базы',
+                    'Введите пароль:',
+                    QLineEdit.EchoMode.Password,
+                    ''
+                    )
             if ok and password:
                 return password
             else:
                 message = 'Неверный пароль'
-                self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
+                self.statusBar.setStyleSheet(
+                        "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                        )
                 self.statusBar.showMessage(message, timeout=1000)
                 self.logger.info(message)
         else:
@@ -269,15 +342,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def get_database_file(self):
         # open database file
-        database, ok = QFileDialog.getOpenFileName(self,
-                                               'Открыть файл базы',
-                                               '.',
-                                               'KeePass Database (*.kdbx)')
+        database, ok = QFileDialog.getOpenFileName(
+                self,
+                'Открыть файл базы',
+                '.',
+                'KeePass Database (*.kdbx)'
+                )
         if ok and database:
             return database
         else:
             message = 'Некоректный файл базы данных'
-            self.statusBar.setStyleSheet("QStatusBar { color: rgba(255, 0, 0, 255); }")
+            self.statusBar.setStyleSheet(
+                    "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                    )
             self.statusBar.showMessage(message, timeout=1000)
             self.logger.info(message)
             return None
@@ -306,24 +383,38 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Настройка списка email
         self.settings.ui.pushButton_2.clicked.connect(
-            lambda : (
+            lambda: (
                 text := self.settings.ui.lineEdit_2.text(),
-                self.settings_data_add('emails_list', text, self.model, self.settings.ui.lineEdit_2) if text else None
+                self.settings_data_add(
+                    'emails_list',
+                    text,
+                    self.model,
+                    self.settings.ui.lineEdit_2
+                    )
+                if text else None
             )
         )
         self.settings.ui.pushButton_3.clicked.connect(
-            lambda : self.settings_data_del('emails_list', self.model, self.settings.ui.listView
+            lambda: self.settings_data_del(
+                'emails_list',
+                self.model,
+                self.settings.ui.listView
                                )
         )
         # Настройка списка доменов
         self.settings.ui.pushButton_4.clicked.connect(
             lambda: (
                 text := self.settings.ui.lineEdit_3.text(),
-                self.settings_data_add('domains_list', text, self.model_2, self.settings.ui.lineEdit_3) if text else None
+                self.settings_data_add(
+                    'domains_list',
+                    text, self.model_2,
+                    self.settings.ui.lineEdit_3)
+                if text else None
             )
         )
         self.settings.ui.pushButton_5.clicked.connect(
-            lambda: self.settings_data_del('domains_list', self.model_2, self.settings.ui.listView_2
+            lambda: self.settings_data_del(
+                'domains_list', self.model_2, self.settings.ui.listView_2
                                            )
         )
 
@@ -336,7 +427,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.settings_clear_lineEdits()
         # Ниже этой строки не привязывать кнопки, они не будут работать.
 
-    def settings_data_add(self, data_key, value, model: QStringListModel, lineedit: QLineEdit):
+    def open_users(self):
+        self.users.exec()
+        self.users.ui.buttonBox.accepted.connect(self.users.accept)
+
+    def settings_data_add(
+            self, data_key, value, model: QStringListModel, lineedit: QLineEdit
+            ):
         self.data[data_key].append(value)
         model.setStringList(self.data[data_key])
         lineedit.clear()
@@ -399,20 +496,35 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     @staticmethod
     def copy_text(lineEdit, button):
-        button.clicked.connect(lambda: QApplication.clipboard().setText(lineEdit.text()))
+        button.clicked.connect(
+                lambda: QApplication.clipboard().setText(lineEdit.text())
+                )
 
     def set_theme_icons(self):
         scheme = QGuiApplication.styleHints().colorScheme()
-        target_theme = "light_theme" if scheme == Qt.ColorScheme.Light else "dark_theme"
+        if scheme == Qt.ColorScheme.Light:
+            target_theme = "light_theme"
+        else:
+            target_theme = "dark_theme"
         for button in self.findChildren(QObject):
             if isinstance(button, (QPushButton, QAction)):
                 icon_name = button.property('iconName')
                 if icon_name:
-                    new_icon_path = f':/{target_theme}/icons/{target_theme}/{icon_name}.svg'
+                    new_icon_path = ':/{0}/icons/{1}/{2}.svg'.format(
+                            target_theme, target_theme, icon_name
+                            )
                     button.setIcon(QIcon(new_icon_path))
+
 
 class Settings(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui = Ui_Dialog()
+        self.ui = Ui_Settings()
+        self.ui.setupUi(self)
+
+
+class Users(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = Ui_Users()
         self.ui.setupUi(self)
