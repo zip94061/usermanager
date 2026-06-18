@@ -40,14 +40,10 @@ class SQLite:
             self.logger.info('Пользователь обновлен')
         self.connection.commit()
 
-    def get_data(self):
-        self.cursor.execute("SELECT * FROM users")
-        return self.cursor.fetchall()
-    
+    def get_fullname(self):
+        self.cursor.execute("SELECT full_name FROM users")
+        return [user[0] for user in self.cursor.fetchall()]
+
     def get_user_data(self, full_name):
         self.cursor.execute("SELECT * FROM users WHERE full_name = ?", (full_name,))
         return self.cursor.fetchall()
-        
-
-sqllite = SQLite()
-print(sqllite.get_user_data('Иванов Иван'))
