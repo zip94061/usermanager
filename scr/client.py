@@ -11,7 +11,8 @@ from PySide6.QtWidgets import (
         QInputDialog,
         QLineEdit,
         QDialog,
-        QPushButton
+        QPushButton,
+        QMessageBox
         )
 from PySide6.QtCore import Qt, QStringListModel, QObject
 from PySide6.QtGui import QGuiApplication, QIcon, QAction
@@ -36,11 +37,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.logger.info('Инициализация программы')
 
         # data init
+        self.sqlite = SQLite()
         self.data = {'domain': 'stonehedge',
                      'database': None,
                      'emails_list': [],
-                     'domains_list': []}
-        self.sqlite = SQLite()
+                     'domains_list': [],
+                     'users': self.sqlite.get_fullname()
+                     }
 
         # UI
         self.setupUi(self)
@@ -97,7 +100,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # users window
         self.users = Users(parent=self)
         self.model_3 = QStringListModel()
-        self.model_3.setStringList(self.sqlite.get_fullname())
+        self.model_3.setStringList(self.data['users'])
         self.users.ui.listView.setModel(self.model_3)
 
         # combo boxes
@@ -235,72 +238,86 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                         )
                 self.statusBar.showMessage(message)
 
-    def save(self):
-        if self.check_data(['login', 'password', 'phone']):
-            # Download database
-            self.logger.info('Поиск файла базы данных')
-            database = self.data['database']
-            if not database or not Path(database).exists():
-                self.logger.info(
-                        'Файл не найден. Инициализация подключения файла'
-                        )
-                database = self.get_database_file()
+    def connect_keepass(self):
+        # Download database
+        self.logger.info('Поиск файла базы данных')
+        database = self.data['database']
+        if not database or not Path(database).exists():
+            self.logger.info(
+                    'Файл не найден. Инициализация подключения файла'
+                    )
+            database = self.get_database_file()
             self.logger.info('Файл найден')
             self.update_data('database', database)
             self.config.database_path = database
-
             # Enter password database
             self.logger.info('Инициализация ввода пароля')
-            password = self.get_database_password()
-            if password:
-                domain = self.data['domain']
-                keepass = KeePass(database=database, password=password)
+        password = self.get_database_password()
+        if password:
+            keepass = KeePass(database=database, password=password)
+            if not keepass.get_status():
+                message = keepass.get_message()
+                self.logger.error(message)
+                self.statusBar.setStyleSheet(
+                        "QStatusBar { color: rgba(255, 0, 0, 255); }"
+                        )
+                self.statusBar.showMessage(message)
+                return None
+            else:
+                # save database credentials
+                self.logger.info('password введет верно')
+                self.update_data('database_password', password)
+                return keepass
 
-                if not keepass.get_status():
-                    message = keepass.get_message()
-                    self.logger.error(message)
+    def save(self):
+        if self.check_data(['login', 'password', 'phone']):
+            # check user exist
+            keepass = self.connect_keepass()
+            if keepass:
+                if keepass.get_user(self.data['login']):
                     self.statusBar.setStyleSheet(
                             "QStatusBar { color: rgba(255, 0, 0, 255); }"
-                                                 )
-                    self.statusBar.showMessage(message)
-                else:
-                    # save database credentials
-                    self.logger.info('password введет верно')
-                    self.update_data('database_password', password)
-
-                    # check user exist
-                    if keepass.get_user(self.data['login']):
-                        self.statusBar.setStyleSheet(
-                                "QStatusBar { color: rgba(255, 0, 0, 255); }"
-                                )
-                        self.statusBar.showMessage(
-                               "Пользователь {0} уже существует".format(
-                                   self.data['login']
-                                   ),
-                               timeout=1000
-                                )
-                    else:
-                        self.sqlite.set_data(
-                                self.data['full_name'],
-                                self.data['login'],
-                                self.data['email'],
-                                self.data['phone']
-                                )
-                        keepass.set_user(
-                                domain,
-                                self.data['login'],
-                                self.data['database_password']
-                                )
-                        self.statusBar.setStyleSheet(
-                                "QStatusBar { color: rgba(0, 255, 0, 255); }"
-                                )
-                        self.statusBar.showMessage(
-                                '{0}. {1} добавлен'.format(
-                                    keepass.get_message(),
-                                    self.data['login']
-                                    ),
-                                timeout=1000
-                                )
+                            )
+                    self.statusBar.showMessage(
+                            "Пользователь {0} уже существует".format(
+                                self.data['login']
+                                ),
+                            timeout=1000
+                            )
+                    reply = QMessageBox.question(
+                            self,
+                            f'{self.data['login']}',
+                            'Сохранить изменения?',
+                            QMessageBox.StandardButton.Yes |
+                            QMessageBox.StandardButton.No
+                            )
+                    if reply == QMessageBox.StandardButton.No:
+                        return None
+                self.sqlite.set_data(
+                        self.data['full_name'],
+                        self.data['login'],
+                        self.data['email'],
+                        self.data['phone']
+                        )
+                keepass.set_user(
+                        self.data['domain'],
+                        self.data['login'],
+                        self.data['password']
+                        )
+                self.data['users'].append(
+                        f'{self.data['full_name']}, {self.data['login']}'
+                        )
+                self.statusBar.setStyleSheet(
+                        "QStatusBar { color: rgba(0, 255, 0, 255); }"
+                        )
+                self.statusBar.showMessage(
+                        '{0}. {1} добавлен'.format(
+                            keepass.get_message(),
+                            self.data['login']
+                            ),
+                        timeout=1000
+                        )
+            self.model_3.setStringList(self.sqlite.get_fullname())
 
     def check_data(self, keys: list):
         result = True
@@ -385,7 +402,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.settings.ui.pushButton_2.clicked.connect(
             lambda: (
                 text := self.settings.ui.lineEdit_2.text(),
-                self.settings_data_add(
+                self.settings_add_data(
                     'emails_list',
                     text,
                     self.model,
@@ -395,7 +412,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             )
         )
         self.settings.ui.pushButton_3.clicked.connect(
-            lambda: self.settings_data_del(
+            lambda: self.settings_del_data(
                 'emails_list',
                 self.model,
                 self.settings.ui.listView
@@ -405,7 +422,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.settings.ui.pushButton_4.clicked.connect(
             lambda: (
                 text := self.settings.ui.lineEdit_3.text(),
-                self.settings_data_add(
+                self.settings_add_data(
                     'domains_list',
                     text, self.model_2,
                     self.settings.ui.lineEdit_3)
@@ -413,7 +430,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             )
         )
         self.settings.ui.pushButton_5.clicked.connect(
-            lambda: self.settings_data_del(
+            lambda: self.settings_del_data(
                 'domains_list', self.model_2, self.settings.ui.listView_2
                                            )
         )
@@ -428,17 +445,61 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Ниже этой строки не привязывать кнопки, они не будут работать.
 
     def open_users(self):
-        self.users.exec()
-        self.users.ui.buttonBox.accepted.connect(self.users.accept)
+        self.users.ui.listView.doubleClicked.connect(self.users.accept)
+        self.users.ui.pushButton.clicked.connect(
+                lambda: self.users_del_user(
+                    self.users.ui.listView.currentIndex().data()
+                    )
+                )
+        if self.users.exec() == QDialog.DialogCode.Accepted:
+            selected_item = self.users.ui.listView.currentIndex()
+            if selected_item.isValid():
+                self.users_load_user(selected_item.data().split(", "))
+            self.users.ui.buttonBox.accepted.connect(self.users.accept)
+        self.users.ui.listView.clearSelection()
 
-    def settings_data_add(
+    def users_load_user(self, index):
+        result = [i for i in self.sqlite.get_user_data(index[1])[0]]
+        (
+                self.data['full_name'],
+                self.data['login'],
+                self.data['email'],
+                self.data['phone']
+                ) = result
+        keepass = self.connect_keepass()
+        if keepass:
+            self.data['password'] = keepass.get_user_password(
+                    self.data['login']
+                    )
+        self.lineEdit_1.setText(self.data['full_name'])
+        self.lineEdit_4.setText(self.data['phone'])
+        self.lineEdit_6.setText(self.data['email'])
+        self.lineEdit_8.setText(self.data['password'])
+        self.lineEdit_9.setText(self.data['login'])
+        self.users.accept()
+
+    def users_del_user(self, index):
+        if not index:
+            self.logger.info('Не выбран пользователь')
+            return
+        else:
+            login = index.split(', ')[1]
+            keepass = self.connect_keepass()
+            if keepass:
+                keepass.del_user(login)
+            self.sqlite.del_user_data(login)
+            print(index)
+            self.data['users'].remove(index)
+        self.model_3.setStringList(self.data['users'])
+
+    def settings_add_data(
             self, data_key, value, model: QStringListModel, lineedit: QLineEdit
             ):
         self.data[data_key].append(value)
         model.setStringList(self.data[data_key])
         lineedit.clear()
 
-    def settings_data_del(self, data_key, model, listview):
+    def settings_del_data(self, data_key, model, listview):
         indexes = listview.selectedIndexes()
         if not indexes:
             return

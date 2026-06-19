@@ -15,26 +15,29 @@ class KeePass:
         if user is None:
             return None
         else:
-            self.logger.error(f"{username} уже существует")
-            return user.username
+            return user
 
     def set_user(self, groupname, username, password):
         self.logger.debug(f'Поиск пользоваля {username}')
-        if not self.get_user(username):
-            if self.get_group(groupname) is None:
-                self.set_group(groupname)
-                self.logger.info(f'Создана группа {groupname}')
-                self.database.save()
-                self.logger.info('База данных сохранена')
-            else:
-                self.logger.info(f'Найдена группа {groupname}')
-            group = self.get_group(groupname)
+        if self.get_group(groupname) is None:
+            self.set_group(groupname)
+            self.logger.info(f'Создана группа {groupname}')
+            self.database.save()
+            self.logger.info('База данных сохранена')
+        else:
+            self.logger.info(f'Найдена группа {groupname}')
+        group = self.get_group(groupname)
+        user = self.get_user(username)
+        if user:
+            user.username = username
+            user.password = password
+        else:
             self.logger.info('Создан новый пользователь')
             # print('Create new user')
             self.database.add_entry(group, username, username, password)
             self.logger.info(f'Добавлена запись {username}')
-            self.database.save()
-            self.logger.info('База данных сохранена')
+        self.database.save()
+        self.logger.info('База данных сохранена')
 
     def get_group(self, groupname):
         group = self.database.find_groups(name=groupname, first=True)
@@ -55,7 +58,9 @@ class KeePass:
             self.status = True
         except exceptions.CredentialsError:
             self.message = 'Неверный Пароль'
-        except (exceptions.HeaderChecksumError, exceptions.PayloadChecksumError):
+        except (
+                exceptions.HeaderChecksumError, exceptions.PayloadChecksumError
+                ):
             self.message = 'Файл базы данных поврежден'
         except FileNotFoundError:
             self.message = 'Нет такого файла базыданных'
@@ -73,3 +78,18 @@ class KeePass:
     def get_users(self):
         users = [user for user in self.database.entries]
         return users
+
+    def get_user_password(self, username):
+        user = self.get_user(username)
+        if user:
+            return user.password
+
+    def del_user(self, username):
+        user = self.get_user(username)
+        print(user)
+        if user:
+            self.database.delete_entry(user)
+            self.database.save()
+            self.logger.info(f'{username} удален')
+        else:
+            self.logger.info(f'{username} не найден')

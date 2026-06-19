@@ -489,10 +489,10 @@
      <string>Файл</string>
     </property>
     <addaction name="action"/>
+    <addaction name="action_5"/>
     <addaction name="action_2"/>
     <addaction name="action_3"/>
     <addaction name="action_4"/>
-    <addaction name="action_5"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -513,10 +513,11 @@
     <bool>false</bool>
    </attribute>
    <addaction name="action"/>
+   <addaction name="action_5"/>
    <addaction name="action_2"/>
    <addaction name="action_3"/>
+   <addaction name="separator"/>
    <addaction name="action_4"/>
-   <addaction name="action_5"/>
   </widget>
   <action name="action">
    <property name="icon">
@@ -567,9 +568,12 @@
    </property>
   </action>
   <action name="action_5">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../resources/resources.qrc">
-     <normaloff>:/dark_theme/icons/dark_theme/open.svg</normaloff>:/dark_theme/icons/dark_theme/open.svg</iconset>
+     <normaloff>:/dark_theme/icons/dark_theme/users.svg</normaloff>:/dark_theme/icons/dark_theme/users.svg</iconset>
    </property>
    <property name="text">
     <string>Пользователи</string>
