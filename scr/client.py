@@ -115,10 +115,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def closeEvent(self, event, /):
         temp = Path('temp')
-        data = [i for i in temp.iterdir()]
-        for i in data:
-            i.unlink()
-        self.logger.info('Папка temp очищена')
+        if temp.exists():
+            data = [i for i in temp.iterdir()]
+            for i in data:
+                i.unlink()
+            self.logger.info('Папка temp очищена')
 
     def update_fields(self):
         full_name = self.lineEdit_1.text().strip()
