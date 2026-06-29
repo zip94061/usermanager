@@ -143,7 +143,6 @@ dmypy.json
 /temp/
 /template/
 /config/
-/database/
 *.log
 *.json
 *.kdbx

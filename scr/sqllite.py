@@ -7,7 +7,8 @@ import logging
 class SQLite:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        self.database = Path("database", "usersdata.db")
+        self.database = Path("data", "usersdata.db")
+        self.database.parent.mkdir(parents=True, exist_ok=True)
         self.connection = sqlite3.connect(self.database)
         self.cursor = self.connection.cursor()
         self.cursor.execute(
