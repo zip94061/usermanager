@@ -84,6 +84,11 @@ class KeePass:
         if user:
             return user.password
 
+    def get_user_group(self, username):
+        user = self.get_user(username)
+        if user:
+            return user.group.name
+
     def del_user(self, username):
         user = self.get_user(username)
         print(user)

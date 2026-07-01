@@ -101,10 +101,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.users = Users(parent=self)
         self.model_3 = QStringListModel()
         self.model_3.setStringList(self.data['users'])
+        self.model_3.sort(0, Qt.AscendingOrder)
         self.users.ui.listView.setModel(self.model_3)
 
         # combo boxes
-        self.comboBox.currentIndexChanged.connect(self.update_email)
+        self.comboBox.activated.connect(self.update_email)
         self.comboBox_2.currentIndexChanged.connect(self.set_domain)
 
         self.generate_password()
@@ -196,6 +197,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 ]:
             lineEdit.clear()
         self.textEdit_2.clear()
+        self.comboBox.setCurrentIndex(0)
+        self.comboBox_2.setCurrentIndex(0)
         self.generate_password()
 
     def update_textEdit_2(self):
@@ -358,6 +361,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             return password
 
+    def new_keepass_database(self):
+        database_name, password, ok = QInputDialog.getText(
+                self,
+                'Название базы',
+                'Пароль',
+                QLineEdit,
+                QLineEdit,
+                ''
+                )
+
     def get_database_file(self):
         # open database file
         database, ok = QFileDialog.getOpenFileName(
@@ -435,6 +448,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 'domains_list', self.model_2, self.settings.ui.listView_2
                                            )
         )
+        self.settings.ui.pushButton_6.clicked.connect(self.new_keepass_database)
 
         # Действие при нажатии кноки Ok
         self.settings.ui.buttonBox.accepted.connect(self.settings.accept)
@@ -458,25 +472,45 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.users_load_user(selected_item.data().split(", "))
             self.users.ui.buttonBox.accepted.connect(self.users.accept)
         self.users.ui.listView.clearSelection()
+        # Ниже этой строки не привязывать кнопки, они не будут работать.
 
     def users_load_user(self, index):
         result = [i for i in self.sqlite.get_user_data(index[1])[0]]
+        self.logger.info(f'Загружен {result}')
         (
                 self.data['full_name'],
                 self.data['login'],
                 self.data['email'],
                 self.data['phone']
                 ) = result
+        last_name, first_name = self.data['full_name'].split(' ', 1)
+        self.lineEdit_1.blockSignals(True)
+        self.lineEdit_1.setText(self.data['full_name'])
+        self.lineEdit_2.setText(last_name)
+        self.lineEdit_3.setText(first_name)
+        self.lineEdit_4.setText(self.data['phone'])
+        self.lineEdit_6.setText(self.data['email'])
+        self.lineEdit_9.setText(self.data['login'])
+        email = self.data['email']
+        emai_domain = email[email.index('@'):]
+        email_index = self.comboBox.findText(emai_domain)
+        if email_index != -1:
+            self.comboBox.setCurrentIndex(email_index)
+
+        self.data['password'] = ''
         keepass = self.connect_keepass()
         if keepass:
             self.data['password'] = keepass.get_user_password(
                     self.data['login']
                     )
-        self.lineEdit_1.setText(self.data['full_name'])
-        self.lineEdit_4.setText(self.data['phone'])
-        self.lineEdit_6.setText(self.data['email'])
+            domain_index = self.comboBox_2.findText(keepass.get_user_group(
+                self.data['login']
+                ))
+            if domain_index != -1:
+                self.comboBox_2.setCurrentIndex(domain_index)
         self.lineEdit_8.setText(self.data['password'])
-        self.lineEdit_9.setText(self.data['login'])
+
+        self.lineEdit_1.blockSignals(False)
         self.users.accept()
 
     def users_del_user(self, index):
