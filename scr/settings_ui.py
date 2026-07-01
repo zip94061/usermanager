@@ -25,9 +25,7 @@ class Ui_Settings(object):
     def setupUi(self, Settings):
         if not Settings.objectName():
             Settings.setObjectName(u"Settings")
-        Settings.resize(325, 635)
-        Settings.setMinimumSize(QSize(325, 635))
-        Settings.setMaximumSize(QSize(325, 635))
+        Settings.resize(331, 742)
         icon = QIcon()
         icon.addFile(u":/dark_theme/icons/dark_theme/settings.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         Settings.setWindowIcon(icon)
@@ -43,8 +41,6 @@ class Ui_Settings(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.lineEdit = QLineEdit(Settings)
         self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(255, 32))
-        self.lineEdit.setMaximumSize(QSize(255, 32))
 
         self.horizontalLayout.addWidget(self.lineEdit)
 
@@ -57,6 +53,14 @@ class Ui_Settings(object):
         self.pushButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout.addWidget(self.pushButton)
+
+        self.pushButton_6 = QPushButton(Settings)
+        self.pushButton_6.setObjectName(u"pushButton_6")
+        self.pushButton_6.setMaximumSize(QSize(40, 39))
+        self.pushButton_6.setIcon(icon1)
+        self.pushButton_6.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout.addWidget(self.pushButton_6)
 
 
         self.verticalLayout_3.addLayout(self.horizontalLayout)
@@ -72,8 +76,6 @@ class Ui_Settings(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.listView = QListView(Settings)
         self.listView.setObjectName(u"listView")
-        self.listView.setMinimumSize(QSize(255, 0))
-        self.listView.setMaximumSize(QSize(255, 16777215))
         self.listView.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.listView.setSelectionMode(QAbstractItemView.SelectionMode.MultiSelection)
 
@@ -81,8 +83,6 @@ class Ui_Settings(object):
 
         self.lineEdit_2 = QLineEdit(Settings)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setMinimumSize(QSize(255, 32))
-        self.lineEdit_2.setMaximumSize(QSize(255, 32))
 
         self.verticalLayout_2.addWidget(self.lineEdit_2)
 
@@ -94,7 +94,6 @@ class Ui_Settings(object):
         self.frame = QFrame(Settings)
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(40, 39))
-        self.frame.setMaximumSize(QSize(40, 16777215))
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -147,7 +146,6 @@ class Ui_Settings(object):
         self.listView_2 = QListView(Settings)
         self.listView_2.setObjectName(u"listView_2")
         self.listView_2.setMinimumSize(QSize(255, 0))
-        self.listView_2.setMaximumSize(QSize(255, 16777215))
         self.listView_2.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.listView_2.setSelectionMode(QAbstractItemView.SelectionMode.MultiSelection)
 
@@ -156,7 +154,6 @@ class Ui_Settings(object):
         self.lineEdit_3 = QLineEdit(Settings)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
         self.lineEdit_3.setMinimumSize(QSize(255, 32))
-        self.lineEdit_3.setMaximumSize(QSize(255, 32))
 
         self.verticalLayout_4.addWidget(self.lineEdit_3)
 
@@ -168,7 +165,6 @@ class Ui_Settings(object):
         self.frame_2 = QFrame(Settings)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setMinimumSize(QSize(40, 39))
-        self.frame_2.setMaximumSize(QSize(40, 16777215))
         self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -223,6 +219,8 @@ class Ui_Settings(object):
         self.label.setText(QCoreApplication.translate("Settings", u"\u0424\u0430\u0439\u043b \u0431\u0430\u0437\u044b \u0434\u0430\u043d\u043d\u044b\u0445 \u043f\u0430\u0440\u043e\u043b\u0435\u0439", None))
         self.pushButton.setText("")
         self.pushButton.setProperty(u"iconName", QCoreApplication.translate("Settings", u"open", None))
+        self.pushButton_6.setText(QCoreApplication.translate("Settings", u"!", None))
+        self.pushButton_6.setProperty(u"iconName", QCoreApplication.translate("Settings", u"open", None))
         self.label_2.setText(QCoreApplication.translate("Settings", u"Email", None))
         self.pushButton_2.setText("")
         self.pushButton_2.setProperty(u"iconName", QCoreApplication.translate("Settings", u"plus", None))
