@@ -5,10 +5,9 @@ import logging
 
 
 class SQLite:
-    def __init__(self):
+    def __init__(self, database):
         self.logger = logging.getLogger(__name__)
-        self.database = Path("data", "usersdata.db")
-        self.database.parent.mkdir(parents=True, exist_ok=True)
+        self.database = Path(f"{database}.db")
         self.connection = sqlite3.connect(self.database)
         self.cursor = self.connection.cursor()
         self.cursor.execute(
@@ -21,7 +20,6 @@ class SQLite:
                             )
         if not self.cursor.fetchone():
             self.logger.info('Создаю таблицу')
-            print('Создаю таблицу')
             self.cursor.execute("""
                                 CREATE TABLE users (
                                     full_name TEXT,

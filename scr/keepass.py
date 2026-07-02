@@ -1,6 +1,8 @@
 import logging
 
-from pykeepass import PyKeePass, exceptions
+from pathlib import Path
+
+import pykeepass
 
 
 class KeePass:
@@ -53,13 +55,14 @@ class KeePass:
     def set_database(self, database, password):
         result = None
         try:
-            result = PyKeePass(database, password)
+            result = pykeepass.PyKeePass(database, password)
             self.message = 'Успешно сохранено'
             self.status = True
-        except exceptions.CredentialsError:
+        except pykeepass.exceptions.CredentialsError:
             self.message = 'Неверный Пароль'
         except (
-                exceptions.HeaderChecksumError, exceptions.PayloadChecksumError
+                pykeepass.exceptions.HeaderChecksumError,
+                pykeepass.exceptions.PayloadChecksumError
                 ):
             self.message = 'Файл базы данных поврежден'
         except FileNotFoundError:
@@ -98,3 +101,9 @@ class KeePass:
             self.logger.info(f'{username} удален')
         else:
             self.logger.info(f'{username} не найден')
+
+
+def create_database(filename, password=None):
+    filename = Path('data', f'{filename}.kdbx')
+    filename.parent.mkdir(parents=True, exist_ok=True)
+    pykeepass.create_database(filename, password)

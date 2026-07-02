@@ -492,9 +492,15 @@
     <addaction name="action_5"/>
     <addaction name="action_2"/>
     <addaction name="action_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
     <addaction name="action_4"/>
    </widget>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -561,7 +567,7 @@
      <normaloff>:/dark_theme/icons/dark_theme/settings.svg</normaloff>:/dark_theme/icons/dark_theme/settings.svg</iconset>
    </property>
    <property name="text">
-    <string>Настройки</string>
+    <string>Настройки...</string>
    </property>
    <property name="iconName" stdset="0">
     <string>settings</string>
@@ -580,6 +586,11 @@
    </property>
    <property name="iconName" stdset="0">
     <string>users</string>
+   </property>
+  </action>
+  <action name="action12345">
+   <property name="text">
+    <string>12345</string>
    </property>
   </action>
  </widget>

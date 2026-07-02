@@ -20,8 +20,9 @@ from PySide6.QtGui import QGuiApplication, QIcon, QAction
 from scr.mainwindow_ui import Ui_MainWindow
 from scr.settings_ui import Ui_Settings
 from scr.users_ui import Ui_Users
+from scr.newkeepass_ui import Ui_newkeepass
 from scr.cheatsheet import CheatSheet
-from scr.keepass import KeePass
+from scr.keepass import KeePass, create_database
 from scr.config import Config
 from scr.logging_config import init_app_logging
 from scr.sqllite import SQLite
@@ -37,12 +38,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.logger.info('Инициализация программы')
 
         # data init
-        self.sqlite = SQLite()
         self.data = {'domain': 'stonehedge',
                      'database': None,
                      'emails_list': [],
                      'domains_list': [],
-                     'users': self.sqlite.get_fullname()
                      }
 
         # UI
@@ -50,6 +49,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.logger.info(QGuiApplication.styleHints().colorScheme())
 
         # config
+        self.settings = Settings(parent=self)
         self.config = Config()
         path = self.config.database_path
         self.data['database'] = path
@@ -58,6 +58,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         domains = self.config.domains
         self.data['domains_list'] = domains
         self.update_comboboxes()
+
+        if not path:
+            self.new_keepass_database()
+        sql_database = self.data['database'][:self.data['database'].index('.')]
+
+        self.sqlite = SQLite(sql_database)
+        self.data['users'] = self.sqlite.get_fullname()
 
         # line edits
         self.lineEdit_1.textChanged.connect(self.update_fields)
@@ -89,7 +96,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.action_5.triggered.connect(self.open_users)
 
         # settings window
-        self.settings = Settings(parent=self)
         self.model = QStringListModel()
         self.model.setStringList(self.data['emails_list'])
         self.settings.ui.listView.setModel(self.model)
@@ -362,14 +368,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return password
 
     def new_keepass_database(self):
-        database_name, password, ok = QInputDialog.getText(
-                self,
-                'Название базы',
-                'Пароль',
-                QLineEdit,
-                QLineEdit,
-                ''
-                )
+        newkeepas = NewKeepass(parent=self)
+        if newkeepas.exec() == QDialog.DialogCode.Accepted:
+            if newkeepas.ui.lineEdit.text():
+                filename = newkeepas.ui.lineEdit.text()
+                password = newkeepas.ui.lineEdit_2.text()
+                create_database(filename, password)
+                new_database_path = str(Path('data', f'{filename}.kdbx'))
+                self.config.database_path = new_database_path
+                self.settings.ui.lineEdit.setText(new_database_path)
+                self.data['database'] = new_database_path
+                self.logger.info('База keepass создана')
 
     def get_database_file(self):
         # open database file
@@ -448,7 +457,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 'domains_list', self.model_2, self.settings.ui.listView_2
                                            )
         )
-        self.settings.ui.pushButton_6.clicked.connect(self.new_keepass_database)
+        self.settings.ui.pushButton_6.clicked.connect(
+                self.new_keepass_database
+                )
 
         # Действие при нажатии кноки Ok
         self.settings.ui.buttonBox.accepted.connect(self.settings.accept)
@@ -623,4 +634,11 @@ class Users(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_Users()
+        self.ui.setupUi(self)
+
+
+class NewKeepass(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = Ui_newkeepass()
         self.ui.setupUi(self)
