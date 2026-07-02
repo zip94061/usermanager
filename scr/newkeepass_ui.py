@@ -23,8 +23,9 @@ class Ui_newkeepass(object):
     def setupUi(self, newkeepass):
         if not newkeepass.objectName():
             newkeepass.setObjectName(u"newkeepass")
-        newkeepass.resize(217, 140)
-        newkeepass.setMaximumSize(QSize(250, 140))
+        newkeepass.resize(220, 180)
+        newkeepass.setMinimumSize(QSize(220, 180))
+        newkeepass.setMaximumSize(QSize(220, 180))
         self.verticalLayout = QVBoxLayout(newkeepass)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.label_3 = QLabel(newkeepass)
@@ -83,7 +84,7 @@ class Ui_newkeepass(object):
 
     def retranslateUi(self, newkeepass):
         newkeepass.setWindowTitle(QCoreApplication.translate("newkeepass", u"Keepass +", None))
-        self.label_3.setText(QCoreApplication.translate("newkeepass", u"\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043d\u043e\u0432\u0443\u044e \u0431\u0430\u0437\u0443 \u0434\u0430\u043d\u043d\u044b\u0445", None))
+        self.label_3.setText(QCoreApplication.translate("newkeepass", u"\u041d\u043e\u0432\u0430\u044f \u0431\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445", None))
         self.label.setText(QCoreApplication.translate("newkeepass", u"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435", None))
         self.label_2.setText(QCoreApplication.translate("newkeepass", u"\u041f\u0430\u0440\u043e\u043b\u044c", None))
     # retranslateUi

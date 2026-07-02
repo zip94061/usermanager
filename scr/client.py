@@ -42,6 +42,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                      'database': None,
                      'emails_list': [],
                      'domains_list': [],
+                     'users': '',
                      }
 
         # UI
@@ -59,12 +60,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.data['domains_list'] = domains
         self.update_comboboxes()
 
+        sql_database = None
         if not path:
+            self.logger.info('Инициализация создания базы данных')
             self.new_keepass_database()
-        sql_database = self.data['database'][:self.data['database'].index('.')]
 
-        self.sqlite = SQLite(sql_database)
-        self.data['users'] = self.sqlite.get_fullname()
+        if self.data['database']:
+            sql_database = self.data['database'][
+                    :self.data['database'].index('.')
+                    ]
+
+        if sql_database:
+            self.sql_init(sql_database)
 
         # line edits
         self.lineEdit_1.textChanged.connect(self.update_fields)
@@ -92,8 +99,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.action.triggered.connect(self.clear_all)
         self.action_2.triggered.connect(self.print)
         self.action_3.triggered.connect(self.save)
-        self.action_4.triggered.connect(self.open_settings)
-        self.action_5.triggered.connect(self.open_users)
+        self.action_4.triggered.connect(self.settings_open)
+        self.action_5.triggered.connect(self.users_open)
 
         # settings window
         self.model = QStringListModel()
@@ -106,9 +113,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # users window
         self.users = Users(parent=self)
         self.model_3 = QStringListModel()
-        self.model_3.setStringList(self.data['users'])
-        self.model_3.sort(0, Qt.AscendingOrder)
-        self.users.ui.listView.setModel(self.model_3)
+        self.users_init_list()
 
         # combo boxes
         self.comboBox.activated.connect(self.update_email)
@@ -127,6 +132,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for i in data:
                 i.unlink()
             self.logger.info('Папка temp очищена')
+
+    def sql_init(self, sql_database):
+        self.sqlite = SQLite(sql_database)
+        self.data['users'] = self.sqlite.get_fullname()
 
     def update_fields(self):
         full_name = self.lineEdit_1.text().strip()
@@ -374,7 +383,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 filename = newkeepas.ui.lineEdit.text()
                 password = newkeepas.ui.lineEdit_2.text()
                 create_database(filename, password)
-                new_database_path = str(Path('data', f'{filename}.kdbx'))
+                new_database_path = str(Path(Path.cwd(), 'data', f'{filename}.kdbx'))
                 self.config.database_path = new_database_path
                 self.settings.ui.lineEdit.setText(new_database_path)
                 self.data['database'] = new_database_path
@@ -400,7 +409,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return None
 
     # Окно настроек
-    def open_settings(self):
+    def settings_open(self):
         database_path = self.data['database']
 
         # Настройка пути до файла базы данных
@@ -468,9 +477,45 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.config.database_path = self.data['database']
             self.update_comboboxes()
             self.settings_clear_lineEdits()
+            sql_database = self.data['database'][
+                    :self.data['database'].index('.')
+                    ]
+            self.sql_init(sql_database)
+            self.users_init_list()
         # Ниже этой строки не привязывать кнопки, они не будут работать.
 
-    def open_users(self):
+    def settings_add_data(
+            self, data_key, value, model: QStringListModel, lineedit: QLineEdit
+            ):
+        self.data[data_key].append(value)
+        model.setStringList(self.data[data_key])
+        lineedit.clear()
+
+    def settings_del_data(self, data_key, model, listview):
+        indexes = listview.selectedIndexes()
+        if not indexes:
+            return
+        if len(indexes) > 1:
+            emails = sorted([index.row() for index in indexes], reverse=True)
+            for email in emails:
+                del self.data[data_key][email]
+        else:
+            email = indexes[0].row()
+            del self.data[data_key][email]
+
+        model.setStringList(self.data[data_key])
+        listview.clearSelection()
+
+    def settings_clear_lineEdits(self):
+        self.settings.ui.lineEdit_2.clear()
+        self.settings.ui.lineEdit_3.clear()
+
+    def users_init_list(self):
+        self.model_3.setStringList(self.data['users'])
+        self.model_3.sort(0, Qt.AscendingOrder)
+        self.users.ui.listView.setModel(self.model_3)
+
+    def users_open(self):
         self.users.ui.listView.doubleClicked.connect(self.users.accept)
         self.users.ui.pushButton.clicked.connect(
                 lambda: self.users_del_user(
@@ -537,32 +582,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             print(index)
             self.data['users'].remove(index)
         self.model_3.setStringList(self.data['users'])
-
-    def settings_add_data(
-            self, data_key, value, model: QStringListModel, lineedit: QLineEdit
-            ):
-        self.data[data_key].append(value)
-        model.setStringList(self.data[data_key])
-        lineedit.clear()
-
-    def settings_del_data(self, data_key, model, listview):
-        indexes = listview.selectedIndexes()
-        if not indexes:
-            return
-        if len(indexes) > 1:
-            emails = sorted([index.row() for index in indexes], reverse=True)
-            for email in emails:
-                del self.data[data_key][email]
-        else:
-            email = indexes[0].row()
-            del self.data[data_key][email]
-
-        model.setStringList(self.data[data_key])
-        listview.clearSelection()
-
-    def settings_clear_lineEdits(self):
-        self.settings.ui.lineEdit_2.clear()
-        self.settings.ui.lineEdit_3.clear()
 
     def update_combobox(self, data_key, combobox):
         combobox.clear()
