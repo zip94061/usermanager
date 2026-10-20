@@ -56,7 +56,20 @@ class CheatSheet:
         self.write_data()
         current_os = platform.system()
         if current_os == 'Linux':
-            subprocess.run(['open', self.user_file])
+            clean_env = os.environ.copy()
+            if 'LD_LIBRARY_PATH_ORIG' in clean_env:
+                clean_env['LD_LIBRARY_PATH'] = clean_env['LD_LIBRARY_PATH_ORIG']
+            else:
+                clean_env.pop('LD_LIBRARY_PATH', None)
+            qt_vars_to_clear = [
+                        'QT_PLUGIN_PATH',
+                        'QT_QPA_PLATFORM_PLUGIN_PATH',
+                        'QT_QPA_PLATFORM',
+                        'XDG_DATA_DIRS'
+                    ]
+            for var in qt_vars_to_clear:
+                clean_env.pop(var, None)
+            subprocess.run(['xdg-open', self.user_file], env=clean_env)
         if current_os == 'Windows':
             os.startfile(self.user_file)
 

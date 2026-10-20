@@ -207,8 +207,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def clear_all(self):
         for lineEdit in [
                 self.lineEdit_1, self.lineEdit_2, self.lineEdit_3,
-                self.lineEdit_4, self.lineEdit_5, self.lineEdit_6,
-                self.lineEdit_7, self.lineEdit_8, self.lineEdit_9
+                self.lineEdit_4, self.lineEdit_6,
+                self.lineEdit_8, self.lineEdit_9
                 ]:
             lineEdit.clear()
         self.textEdit_2.clear()
@@ -229,9 +229,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.copy_text(self.lineEdit_2, self.pushButton_2)
         self.copy_text(self.lineEdit_3, self.pushButton_3)
         self.copy_text(self.lineEdit_4, self.pushButton_4)
-        self.copy_text(self.lineEdit_5, self.pushButton_5)
         self.copy_text(self.lineEdit_6, self.pushButton_6)
-        self.copy_text(self.lineEdit_7, self.pushButton_7)
         self.copy_text(self.lineEdit_8, self.pushButton_8)
         self.copy_text(self.lineEdit_9, self.pushButton_9)
         self.pushButton_12.clicked.connect(
@@ -460,11 +458,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.settings.ui.lineEdit_3)
                 if text else None
             )
-        )
-        self.settings.ui.pushButton_5.clicked.connect(
-            lambda: self.settings_del_data(
-                'domains_list', self.model_2, self.settings.ui.listView_2
-                                           )
         )
         self.settings.ui.pushButton_6.clicked.connect(
                 self.new_keepass_database
