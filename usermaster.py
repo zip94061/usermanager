@@ -2,10 +2,12 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from scr.client import MainWindow
+from src.client import MainWindow
 
 app = QApplication(sys.argv)
+appversion = '1.0.0'
 window = MainWindow()
+window.setWindowTitle(f'{window.windowTitle()} {appversion}')
 window.show()
 
 for lineEdit in [window.lineEdit_2, window.lineEdit_3, window.lineEdit_4,
