@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QApplication
 from src.client import MainWindow
 
 app = QApplication(sys.argv)
-appversion = '1.0.0'
+appversion = '1.0.1'
 window = MainWindow()
 window.setWindowTitle(f'{window.windowTitle()} {appversion}')
 window.show()

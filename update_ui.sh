@@ -19,5 +19,5 @@ echo "$FILE обновлен"
 
 FILE="./src/users_ui.py"
 NEW_TEXT="import src.resources_rc"
-sed -i "21s|.*|$NEW_TEXT|" "$FILE"
+sed -i "22s|.*|$NEW_TEXT|" "$FILE"
 echo "$FILE обновлен"

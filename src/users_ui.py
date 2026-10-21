@@ -16,8 +16,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractButton, QAbstractItemView, QApplication, QDialog,
-    QDialogButtonBox, QFrame, QHBoxLayout, QListView,
-    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
+    QDialogButtonBox, QFrame, QHBoxLayout, QLineEdit,
+    QListView, QPushButton, QSizePolicy, QVBoxLayout,
+    QWidget)
 import src.resources_rc
 
 class Ui_Users(object):
@@ -30,15 +31,15 @@ class Ui_Users(object):
         Users.setWindowIcon(icon)
         self.verticalLayout_2 = QVBoxLayout(Users)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.listView = QListView(Users)
         self.listView.setObjectName(u"listView")
         self.listView.setMinimumSize(QSize(0, 0))
         self.listView.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.listView.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
 
-        self.horizontalLayout.addWidget(self.listView)
+        self.horizontalLayout_2.addWidget(self.listView)
 
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -68,7 +69,43 @@ class Ui_Users(object):
         self.verticalLayout.addWidget(self.pushButton)
 
 
-        self.horizontalLayout.addLayout(self.verticalLayout)
+        self.horizontalLayout_2.addLayout(self.verticalLayout)
+
+
+        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
+
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.lineEdit = QLineEdit(Users)
+        self.lineEdit.setObjectName(u"lineEdit")
+
+        self.horizontalLayout.addWidget(self.lineEdit)
+
+        self.pushButton_2 = QPushButton(Users)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        sizePolicy.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_2.setSizePolicy(sizePolicy)
+        self.pushButton_2.setMinimumSize(QSize(40, 39))
+        self.pushButton_2.setMaximumSize(QSize(40, 39))
+        icon2 = QIcon()
+        icon2.addFile(u":/dark_theme/icons/dark_theme/search.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton_2.setIcon(icon2)
+        self.pushButton_2.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout.addWidget(self.pushButton_2)
+
+        self.pushButton_3 = QPushButton(Users)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_3.setSizePolicy(sizePolicy)
+        self.pushButton_3.setMinimumSize(QSize(40, 39))
+        self.pushButton_3.setMaximumSize(QSize(40, 39))
+        icon3 = QIcon()
+        icon3.addFile(u":/dark_theme/icons/dark_theme/reset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton_3.setIcon(icon3)
+        self.pushButton_3.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout.addWidget(self.pushButton_3)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout)
@@ -92,5 +129,9 @@ class Ui_Users(object):
         Users.setWindowTitle(QCoreApplication.translate("Users", u"\u0421\u043f\u0438\u0441\u043e\u043a \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439", None))
         self.pushButton.setText("")
         self.pushButton.setProperty(u"iconName", QCoreApplication.translate("Users", u"minus", None))
+        self.pushButton_2.setText("")
+        self.pushButton_2.setProperty(u"iconName", QCoreApplication.translate("Users", u"search", None))
+        self.pushButton_3.setText("")
+        self.pushButton_3.setProperty(u"iconName", QCoreApplication.translate("Users", u"reset", None))
     # retranslateUi
 

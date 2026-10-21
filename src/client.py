@@ -503,10 +503,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.settings.ui.lineEdit_2.clear()
         self.settings.ui.lineEdit_3.clear()
 
-    def users_init_list(self):
-        self.model_3.setStringList(self.data['users'])
+    def users_init_list(self, users_list=None):
+        if not users_list:
+            users_list = self.data['users']
+        self.model_3.setStringList(users_list)
         self.model_3.sort(0, Qt.AscendingOrder)
         self.users.ui.listView.setModel(self.model_3)
+
+    def users_search_user(self, keyword):
+        result = []
+        for user in self.data['users']:
+            if keyword in user:
+                result.append(user)
+        self.users_init_list(result)
+
+    def users_search_reset(self):
+        self.users.ui.lineEdit.clear()
+        self.users_init_list()
 
     def users_open(self):
         self.users.ui.listView.doubleClicked.connect(self.users.accept)
@@ -515,7 +528,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.users.ui.listView.currentIndex().data()
                     )
                 )
-        if self.users.exec() == QDialog.DialogCode.Accepted:
+        self.users.ui.pushButton_2.clicked.connect(
+                lambda: self.users_search_user(
+                    self.users.ui.lineEdit.text()
+                    )
+                )
+        self.users.ui.pushButton_3.clicked.connect(
+                self.users_search_reset
+                )
+
+        result = self.users.exec()
+        if result == QDialog.DialogCode.Rejected:
+            self.users.ui.lineEdit.clear()
+            self.users_init_list()
+
+        if result == QDialog.DialogCode.Accepted:
             selected_item = self.users.ui.listView.currentIndex()
             if selected_item.isValid():
                 self.users_load_user(selected_item.data().split(", "))

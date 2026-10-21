@@ -4,6 +4,7 @@
     <file>icons/dark_theme/open.svg</file>
     <file>icons/dark_theme/user.svg</file>
     <file>icons/dark_theme/settings.svg</file>
+    <file>icons/dark_theme/search.svg</file>
     <file>icons/dark_theme/save.svg</file>
     <file>icons/dark_theme/restart.svg</file>
     <file>icons/dark_theme/reset.svg</file>
@@ -20,6 +21,7 @@
     <file>icons/light_theme/copy.svg</file>
     <file>icons/light_theme/users.svg</file>
     <file>icons/light_theme/save.svg</file>
+    <file>icons/light_theme/search.svg</file>
     <file>icons/light_theme/print.svg</file>
     <file>icons/light_theme/new_user.svg</file>
     <file>icons/light_theme/reset.svg</file>
