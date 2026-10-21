@@ -6,20 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>220</width>
-    <height>180</height>
+    <width>217</width>
+    <height>140</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>220</width>
-    <height>180</height>
-   </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>220</width>
-    <height>180</height>
+    <width>250</width>
+    <height>140</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -29,7 +23,7 @@
    <item alignment="Qt::AlignmentFlag::AlignHCenter">
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>Новая база данных</string>
+      <string>Создать новую базу данных</string>
      </property>
     </widget>
    </item>
