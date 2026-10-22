@@ -37,8 +37,8 @@
       <widget class="QPushButton" name="pushButton">
        <property name="maximumSize">
         <size>
-         <width>40</width>
-         <height>39</height>
+         <width>31</width>
+         <height>32</height>
         </size>
        </property>
        <property name="text">
@@ -63,12 +63,12 @@
       <widget class="QPushButton" name="pushButton_6">
        <property name="maximumSize">
         <size>
-         <width>40</width>
-         <height>39</height>
+         <width>31</width>
+         <height>32</height>
         </size>
        </property>
        <property name="text">
-        <string>+</string>
+        <string/>
        </property>
        <property name="icon">
         <iconset resource="../resources/resources.qrc">
@@ -119,8 +119,14 @@
         <widget class="QFrame" name="frame">
          <property name="minimumSize">
           <size>
-           <width>40</width>
+           <width>31</width>
            <height>39</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>16777215</height>
           </size>
          </property>
          <property name="frameShape">
@@ -135,20 +141,20 @@
         <widget class="QPushButton" name="pushButton_2">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>40</horstretch>
-           <verstretch>39</verstretch>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>31</width>
+           <height>32</height>
           </size>
          </property>
          <property name="text">
@@ -173,20 +179,20 @@
         <widget class="QPushButton" name="pushButton_3">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>40</horstretch>
-           <verstretch>39</verstretch>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>31</width>
+           <height>32</height>
           </size>
          </property>
          <property name="text">
@@ -256,8 +262,14 @@
         <widget class="QFrame" name="frame_2">
          <property name="minimumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>9</width>
+           <height>9</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>16777215</height>
           </size>
          </property>
          <property name="frameShape">
@@ -272,20 +284,20 @@
         <widget class="QPushButton" name="pushButton_4">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>40</horstretch>
-           <verstretch>39</verstretch>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>31</width>
+           <height>32</height>
           </size>
          </property>
          <property name="text">
@@ -310,20 +322,20 @@
         <widget class="QPushButton" name="pushButton_5">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>40</horstretch>
-           <verstretch>39</verstretch>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>40</width>
-           <height>39</height>
+           <width>31</width>
+           <height>32</height>
           </size>
          </property>
          <property name="text">
@@ -358,6 +370,9 @@
      </property>
      <property name="standardButtons">
       <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

@@ -11,8 +11,8 @@ class Config:
         self.config_file.parent.mkdir(parents=True, exist_ok=True)
         self.config_data = {
             'database': None,
-            'emails': [],
-            'domains': []
+            'emails_list': [],
+            'domains_list': []
                             }
 
         if not self.config_file.exists():
@@ -30,20 +30,24 @@ class Config:
         self.export_to_config_file()
 
     @property
-    def emails(self):
-       return self.config_data['emails']
+    def emails_list(self):
+        return self.config_data['emails_list']
 
-    @emails.setter
-    def emails(self, email):
-        self.config_data['emails'].apppend(email)
+    @emails_list.setter
+    def emails_list(self, email):
+        self.config_data['emails_list'].append(email)
+
+    def rewrite_values(self, key, value):
+        self.config_data[key] = value
+        print(self.config_data[key])
 
     @property
-    def domains(self):
-        return self.config_data['domains']
+    def domains_list(self):
+        return self.config_data['domains_list']
 
-    @domains.setter
-    def domains(self, domain):
-        self.config_data['domains'].append(domain)
+    @domains_list.setter
+    def domains_list(self, domain):
+        self.config_data['domains_list'].append(domain)
 
     def export_to_config_file(self):
         with open(self.config_file, 'w', encoding='utf-8') as file:
@@ -54,4 +58,3 @@ class Config:
         with open(self.config_file, 'r', encoding='utf-8') as file:
             self.logger.info('config.json загружен')
             return json.load(file)
-

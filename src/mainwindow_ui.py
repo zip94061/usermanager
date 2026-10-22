@@ -171,29 +171,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout_5)
 
-        self.label_5 = QLabel(self.centralwidget)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setStyleSheet(u"")
-
-        self.verticalLayout.addWidget(self.label_5)
-
-        self.horizontalLayout_6 = QHBoxLayout()
-        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.lineEdit_5 = QLineEdit(self.centralwidget)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
-        self.lineEdit_5.setStyleSheet(u"background-color: rgba(255,255,255,20);")
-
-        self.horizontalLayout_6.addWidget(self.lineEdit_5)
-
-        self.pushButton_5 = QPushButton(self.centralwidget)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setIcon(icon6)
-
-        self.horizontalLayout_6.addWidget(self.pushButton_5)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout_6)
-
         self.label_6 = QLabel(self.centralwidget)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setStyleSheet(u"")
@@ -220,6 +197,7 @@ class Ui_MainWindow(object):
         self.comboBox = QComboBox(self.centralwidget)
         self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setMaximumSize(QSize(258, 16777215))
 
         self.verticalLayout.addWidget(self.comboBox)
 
@@ -307,6 +285,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.label_10 = QLabel(self.centralwidget)
         self.label_10.setObjectName(u"label_10")
+        self.label_10.setMinimumSize(QSize(0, 31))
         self.label_10.setFont(font)
 
         self.verticalLayout_2.addWidget(self.label_10)
@@ -400,9 +379,6 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:700;\">\u0412\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0438\u0439 \u043d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430</span></p></body></html>", None))
         self.pushButton_4.setText("")
         self.pushButton_4.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"copy", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:700;\">\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0439</span></p></body></html>", None))
-        self.pushButton_5.setText("")
-        self.pushButton_5.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"copy", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:700;\">Email</span></p></body></html>", None))
         self.pushButton_6.setText("")
         self.pushButton_6.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"copy", None))

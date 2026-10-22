@@ -54,9 +54,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.config = Config()
         path = self.config.database_path
         self.data['database'] = path
-        emails = self.config.emails
+        emails = self.config.emails_list
         self.data['emails_list'] = emails
-        domains = self.config.domains
+        domains = self.config.domains_list
         self.data['domains_list'] = domains
         self.update_comboboxes()
 
@@ -67,7 +67,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         if self.data['database']:
             sql_database = self.data['database'][
-                    :self.data['database'].index('.')
+                    :self.data['database'].index('.kdbx')
                     ]
 
         if sql_database:
@@ -459,6 +459,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if text else None
             )
         )
+        self.settings.ui.pushButton_5.clicked.connect(
+                lambda: (
+                    self.settings_del_data(
+                        'domains_list',
+                        self.model_2,
+                        self.settings.ui.listView_2
+                        )
+                    )
+                )
+
         self.settings.ui.pushButton_6.clicked.connect(
                 self.new_keepass_database
                 )
@@ -466,7 +476,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Действие при нажатии кноки Ok
         self.settings.ui.buttonBox.accepted.connect(self.settings.accept)
 
-        if self.settings.exec() == QDialog.DialogCode.Accepted:
+        result = self.settings.exec()
+        if result == QDialog.DialogCode.Accepted:
+            if self.data.get('emails_list_new'):
+                self.settings_rewrite_values('emails_list')
+                self.settings.ui.listView.setModel(self.model)
+            if self.data.get('domains_list_new'):
+                self.settings_rewrite_values('domains_list')
+                self.settings.ui.listView_2.setModel(self.model_2)
+
             self.config.database_path = self.data['database']
             self.update_comboboxes()
             self.settings_clear_lineEdits()
@@ -475,6 +493,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     ]
             self.sql_init(sql_database)
             self.users_init_list()
+
+        if result == QDialog.DialogCode.Rejected:
+            self.model.setStringList(self.data['emails_list'])
+            self.settings.ui.listView.setModel(self.model)
         # Ниже этой строки не привязывать кнопки, они не будут работать.
 
     def settings_add_data(
@@ -488,20 +510,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         indexes = listview.selectedIndexes()
         if not indexes:
             return
-        if len(indexes) > 1:
-            emails = sorted([index.row() for index in indexes], reverse=True)
-            for email in emails:
-                del self.data[data_key][email]
-        else:
-            email = indexes[0].row()
-            del self.data[data_key][email]
-
-        model.setStringList(self.data[data_key])
+        delete_items = sorted([index.row() for index in indexes], reverse=True)
+        items_list = self.data[data_key].copy()
+        for item in delete_items:
+            del items_list[item]
+        self.data[f'{data_key}_new'] = items_list
+        model.setStringList(self.data[f'{data_key}_new'])
         listview.clearSelection()
 
     def settings_clear_lineEdits(self):
         self.settings.ui.lineEdit_2.clear()
         self.settings.ui.lineEdit_3.clear()
+
+    def settings_rewrite_values(self, key):
+        new_items = self.data[f'{key}_new']
+        self.data[key] = new_items.copy()
+        del self.data[f'{key}_new']
+        self.config.rewrite_values(key, new_items)
 
     def users_init_list(self, users_list=None):
         if not users_list:
@@ -513,7 +538,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def users_search_user(self, keyword):
         result = []
         for user in self.data['users']:
-            if keyword in user:
+            if keyword in user.lower():
                 result.append(user)
         self.users_init_list(result)
 
@@ -568,8 +593,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lineEdit_6.setText(self.data['email'])
         self.lineEdit_9.setText(self.data['login'])
         email = self.data['email']
-        emai_domain = email[email.index('@'):]
-        email_index = self.comboBox.findText(emai_domain)
+        print('email', email)
+        email_domain = email[email.index('@'):]
+        email_index = self.comboBox.findText(email_domain)
         if email_index != -1:
             self.comboBox.setCurrentIndex(email_index)
 
