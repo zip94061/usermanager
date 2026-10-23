@@ -1,5 +1,4 @@
 #!/bin/bash
-cd ../
 pyside6-uic ui/mainwindow.ui -o src/mainwindow_ui.py
 pyside6-uic ui/settings.ui -o src/settings_ui.py
 pyside6-uic ui/users.ui -o src/users_ui.py
