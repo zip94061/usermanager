@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>UserStone</string>
+   <string>userMaster</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../resources/resources.qrc">
