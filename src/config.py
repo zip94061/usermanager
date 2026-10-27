@@ -39,7 +39,6 @@ class Config:
 
     def rewrite_values(self, key, value):
         self.config_data[key] = value
-        print(self.config_data[key])
 
     @property
     def domains_list(self):

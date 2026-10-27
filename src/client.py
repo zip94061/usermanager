@@ -477,11 +477,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.settings.ui.buttonBox.accepted.connect(self.settings.accept)
 
         result = self.settings.exec()
+        print(result)
         if result == QDialog.DialogCode.Accepted:
-            if self.data.get('emails_list_new'):
+            if 'emails_list_new' in self.data:
                 self.settings_rewrite_values('emails_list')
                 self.settings.ui.listView.setModel(self.model)
-            if self.data.get('domains_list_new'):
+            if 'domains_list_new' in self.data:
                 self.settings_rewrite_values('domains_list')
                 self.settings.ui.listView_2.setModel(self.model_2)
 

@@ -355,7 +355,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"UserStone", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"userMaster", None))
         self.action.setText(QCoreApplication.translate("MainWindow", u"\u041d\u043e\u0432\u044b\u0439...", None))
         self.action.setProperty(u"iconName", QCoreApplication.translate("MainWindow", u"new_user", None))
         self.action_2.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0447\u0430\u0442\u044c...", None))
